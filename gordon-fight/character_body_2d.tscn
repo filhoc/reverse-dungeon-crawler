@@ -21,7 +21,7 @@ animations = [{
 radius = 5.0
 height = 12.0
 
-[node name="CharacterBody2D" type="CharacterBody2D" unique_id=1330835791]
+[node name="player" type="CharacterBody2D" unique_id=1330835791]
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=1236423327]
 sprite_frames = SubResource("SpriteFrames_xrivr")
