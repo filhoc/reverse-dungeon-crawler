@@ -1,6 +1,7 @@
 [gd_scene format=3 uid="uid://dqwtpnc21i57o"]
 
 [ext_resource type="Texture2D" uid="uid://cqgvs32ai4l6h" path="res://assets/sprites/slime_green.png" id="1_f50pn"]
+[ext_resource type="Script" uid="uid://dji8fyxho5hg5" path="res://character_body_2d.gd" id="1_ij6vw"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_ij6vw"]
 atlas = ExtResource("1_f50pn")
@@ -22,6 +23,7 @@ radius = 5.0
 height = 12.0
 
 [node name="player" type="CharacterBody2D" unique_id=1330835791]
+script = ExtResource("1_ij6vw")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=1236423327]
 sprite_frames = SubResource("SpriteFrames_xrivr")
@@ -29,3 +31,7 @@ sprite_frames = SubResource("SpriteFrames_xrivr")
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1886500894]
 position = Vector2(0, 5)
 shape = SubResource("CapsuleShape2D_xrivr")
+
+[node name="Camera2D" type="Camera2D" parent="." unique_id=1043612076]
+zoom = Vector2(4, 4)
+position_smoothing_enabled = true
