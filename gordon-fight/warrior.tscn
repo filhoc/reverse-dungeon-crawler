@@ -1,0 +1,41 @@
+[gd_scene format=3 uid="uid://w8e6pocxnkb1"]
+
+[ext_resource type="Script" uid="uid://bu3nogmc5k8il" path="res://warrior.gd" id="1_373gj"]
+[ext_resource type="Texture2D" uid="uid://dvfn8modq5ptn" path="res://assets/sprites/knight.png" id="1_bgok4"]
+[ext_resource type="PackedScene" uid="uid://u6gp86vroh4y" path="res://killzone.tscn" id="2_pkbmn"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_hqtel"]
+atlas = ExtResource("1_bgok4")
+region = Rect2(0, 0, 32, 36)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_373gj"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_hqtel")
+}],
+"loop": 1,
+"name": &"default",
+"speed": 5.0
+}]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_7o7qx"]
+radius = 5.0
+height = 20.0
+
+[node name="warrior" type="Node2D" unique_id=1051920417]
+script = ExtResource("1_373gj")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=1094449292]
+sprite_frames = SubResource("SpriteFrames_373gj")
+
+[node name="left" type="RayCast2D" parent="." unique_id=509852396]
+target_position = Vector2(-18, 0)
+
+[node name="right" type="RayCast2D" parent="." unique_id=2055908602]
+target_position = Vector2(18, 0)
+
+[node name="killzone" parent="." unique_id=252532267 instance=ExtResource("2_pkbmn")]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="killzone" unique_id=2051199426]
+shape = SubResource("CapsuleShape2D_7o7qx")
