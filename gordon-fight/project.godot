@@ -11,7 +11,7 @@ config_version=5
 [application]
 
 config/name="Gordon fight"
-run/main_scene="uid://blqcdtfqbtx0g"
+run/main_scene="uid://dybyfe2kbk6ep"
 config/features=PackedStringArray("4.7", "GL Compatibility")
 config/icon="res://icon.svg"
 

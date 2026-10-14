@@ -1,18 +1,20 @@
- extends CharacterBody2D
+extends CharacterBody2D
 
 @export var speed: float = 100.0
 
-var player: CharacterBody2D
+var player: Node2D
 
 func _ready() -> void:
 	player = get_tree().get_first_node_in_group("player")
 
-
-func _physics_process(delta: float) -> void:
+func _process(delta: float) -> void:
 	if player:
-		# Find the direction to the player
-		var direction = global_position.direction_to(player.global_position)
+		var direction = sign(player.global_position.x - global_position.x)
 
-		# Move towards the player
-		velocity = direction * speed
-		move_and_slide()
+		global_position.x += direction * speed * delta
+
+		# Face the direction the warrior moves
+		if direction < 0:
+			$AnimatedSprite2D.flip_h = true
+		elif direction > 0:
+			$AnimatedSprite2D.flip_h = false
