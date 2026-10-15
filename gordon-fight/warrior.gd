@@ -1,11 +1,12 @@
-extends CharacterBody2D
+extends Node2D
 
 @export var speed: float = 100.0
 
-var player: Node2D
+var player: CharacterBody2D
 
 func _ready() -> void:
-	player = get_tree().get_first_node_in_group("player")
+	player = get_parent().get_node("player")
+	print(player)
 
 func _process(delta: float) -> void:
 	if player:
