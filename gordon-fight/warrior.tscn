@@ -1,7 +1,7 @@
 [gd_scene format=3 uid="uid://w8e6pocxnkb1"]
 
 [ext_resource type="Script" uid="uid://bu3nogmc5k8il" path="res://warrior.gd" id="1_373gj"]
-[ext_resource type="Texture2D" uid="uid://dvfn8modq5ptn" path="res://assets/sprites/knight.png" id="1_bgok4"]
+[ext_resource type="Texture2D" uid="uid://l57pw1wboi38" path="res://assets/sprites/knight.png" id="1_bgok4"]
 [ext_resource type="PackedScene" uid="uid://u6gp86vroh4y" path="res://killzone.tscn" id="2_pkbmn"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_hqtel"]
