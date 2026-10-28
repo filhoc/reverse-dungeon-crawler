@@ -61,7 +61,7 @@ animations = [{
 }],
 "loop": 1,
 "name": &"attack",
-"speed": 5.0
+"speed": 6.0
 }, {
 "frames": [{
 "duration": 1.0,
@@ -84,7 +84,7 @@ animations = [{
 }],
 "loop": 1,
 "name": &"run",
-"speed": 5.0
+"speed": 10.0
 }]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_7o7qx"]
@@ -97,7 +97,7 @@ script = ExtResource("1_373gj")
 position = Vector2(-2, 12)
 sprite_frames = SubResource("SpriteFrames_373gj")
 animation = &"run"
-frame_progress = 0.24145725
+frame_progress = 0.8189066
 
 [node name="left" type="RayCast2D" parent="." unique_id=509852396]
 target_position = Vector2(-18, 0)
