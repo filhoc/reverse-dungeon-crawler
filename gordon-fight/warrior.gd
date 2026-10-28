@@ -1,12 +1,11 @@
 extends Node2D
 
-@export var speed: float = 100.0
+@export var speed: float = 80.0
 
 var player: CharacterBody2D
 
 func _ready() -> void:
 	player = get_parent().get_node("player")
-	print(player)
 
 func _process(delta: float) -> void:
 	if player:
