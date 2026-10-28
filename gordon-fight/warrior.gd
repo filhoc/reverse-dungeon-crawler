@@ -4,6 +4,9 @@ extends Node2D
 
 var player: CharacterBody2D
 
+@onready var animated_sprite_2d: AnimatedSprite2D = $AnimatedSprite2D
+
+
 func _ready() -> void:
 	player = get_parent().get_node("player")
 
@@ -15,6 +18,11 @@ func _process(delta: float) -> void:
 
 		# Face the direction the warrior moves
 		if direction < 0:
+			
 			$AnimatedSprite2D.flip_h = true
+			animated_sprite_2d.play("run")
+			
+			
 		elif direction > 0:
 			$AnimatedSprite2D.flip_h = false
+			animated_sprite_2d.play("run") 

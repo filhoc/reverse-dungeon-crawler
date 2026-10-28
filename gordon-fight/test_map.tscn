@@ -172,11 +172,11 @@ distance = -115.0
 
 [node name="test map" type="Node2D" unique_id=87030626]
 
+[node name="warrior" parent="." unique_id=1051920417 instance=ExtResource("2_t8dge")]
+position = Vector2(-44, -6)
+
 [node name="player" parent="." unique_id=1330835791 instance=ExtResource("1_s02eq")]
 position = Vector2(-2, 21)
-
-[node name="warrior" parent="." unique_id=1051920417 instance=ExtResource("2_t8dge")]
-position = Vector2(-56, 23)
 
 [node name="TileMap" type="TileMap" parent="." unique_id=555122774]
 format = 2
