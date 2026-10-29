@@ -170,7 +170,7 @@ sources/0 = SubResource("TileSetAtlasSource_r0pc2")
 [sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_1hysq"]
 distance = -115.0
 
-[node name="test map" type="Node2D" unique_id=87030626]
+[node name="level 1" type="Node2D" unique_id=87030626]
 
 [node name="warrior" parent="." unique_id=1051920417 instance=ExtResource("2_t8dge")]
 position = Vector2(-44, -6)

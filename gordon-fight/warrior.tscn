@@ -94,10 +94,10 @@ height = 50.0
 script = ExtResource("1_373gj")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=1094449292]
+texture_filter = 1
 position = Vector2(-2, 12)
 sprite_frames = SubResource("SpriteFrames_373gj")
-animation = &"run"
-frame_progress = 0.8189066
+animation = &"attack"
 
 [node name="left" type="RayCast2D" parent="." unique_id=509852396]
 target_position = Vector2(-18, 0)
