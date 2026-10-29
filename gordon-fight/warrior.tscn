@@ -44,6 +44,30 @@ region = Rect2(340, 158, 68, 79)
 atlas = ExtResource("2_373gj")
 region = Rect2(408, 158, 68, 79)
 
+[sub_resource type="AtlasTexture" id="AtlasTexture_0w1sp"]
+atlas = ExtResource("2_373gj")
+region = Rect2(408, 162, 68, 81)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_sbkwi"]
+atlas = ExtResource("2_373gj")
+region = Rect2(340, 162, 68, 81)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_0ffui"]
+atlas = ExtResource("2_373gj")
+region = Rect2(272, 162, 68, 81)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_wqwbd"]
+atlas = ExtResource("2_373gj")
+region = Rect2(204, 162, 68, 81)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_furji"]
+atlas = ExtResource("2_373gj")
+region = Rect2(136, 162, 68, 81)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_cqqrk"]
+atlas = ExtResource("2_373gj")
+region = Rect2(68, 162, 68, 81)
+
 [sub_resource type="SpriteFrames" id="SpriteFrames_373gj"]
 animations = [{
 "frames": [{
@@ -81,6 +105,24 @@ animations = [{
 }, {
 "duration": 1.0,
 "texture": SubResource("AtlasTexture_2vy7y")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_0w1sp")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_sbkwi")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_0ffui")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_wqwbd")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_furji")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_cqqrk")
 }],
 "loop": 1,
 "name": &"run",
@@ -97,7 +139,8 @@ script = ExtResource("1_373gj")
 texture_filter = 1
 position = Vector2(-2, 12)
 sprite_frames = SubResource("SpriteFrames_373gj")
-animation = &"attack"
+animation = &"run"
+frame_progress = 0.6899247
 
 [node name="left" type="RayCast2D" parent="." unique_id=509852396]
 target_position = Vector2(-18, 0)
