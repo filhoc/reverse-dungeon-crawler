@@ -1,8 +1,8 @@
 [gd_scene format=4 uid="uid://dybyfe2kbk6ep"]
 
-[ext_resource type="PackedScene" uid="uid://g6ldvk3ridr2" path="res://character_body_2d.tscn" id="1_s02eq"]
 [ext_resource type="PackedScene" uid="uid://w8e6pocxnkb1" path="res://warrior.tscn" id="2_t8dge"]
 [ext_resource type="Texture2D" uid="uid://t87d8fn8hnpw" path="res://assets/sprites/world_tileset.png" id="3_qgarv"]
+[ext_resource type="PackedScene" uid="uid://bg4spvg5x8jur" path="res://1_st_player_character.tscn" id="3_s02eq"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_r0pc2"]
 texture = ExtResource("3_qgarv")
@@ -175,9 +175,6 @@ distance = -115.0
 [node name="warrior" parent="." unique_id=1051920417 instance=ExtResource("2_t8dge")]
 position = Vector2(-44, -6)
 
-[node name="player" parent="." unique_id=1330835791 instance=ExtResource("1_s02eq")]
-position = Vector2(-2, 21)
-
 [node name="TileMap" type="TileMap" parent="." unique_id=555122774]
 format = 2
 
@@ -189,3 +186,6 @@ tile_set = SubResource("TileSet_1hysq")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D" unique_id=1364813283]
 shape = SubResource("WorldBoundaryShape2D_1hysq")
+
+[node name="1st player character" parent="." unique_id=757792488 instance=ExtResource("3_s02eq")]
+position = Vector2(76, 11)

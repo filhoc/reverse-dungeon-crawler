@@ -8,7 +8,7 @@ var player: CharacterBody2D
 
 
 func _ready() -> void:
-	player = get_parent().get_node("player")
+	player = get_parent().get_node("1st player character")
 
 func _process(delta: float) -> void:
 	if player:

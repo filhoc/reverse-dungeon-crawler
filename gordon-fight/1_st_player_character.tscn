@@ -1,6 +1,7 @@
 [gd_scene format=3 uid="uid://bg4spvg5x8jur"]
 
 [ext_resource type="Texture2D" uid="uid://d2hj8qdtptmw7" path="res://assets/sprites/first_boss_animated_nobackground.png" id="1_27hse"]
+[ext_resource type="Script" uid="uid://pfdfb88rvb1f" path="res://1_st_player_character.gd" id="1_hxqmh"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_hxqmh"]
 atlas = ExtResource("1_27hse")
@@ -187,7 +188,7 @@ animations = [{
 }],
 "loop": 1,
 "name": &"attack",
-"speed": 10.0
+"speed": 14.0
 }, {
 "frames": [{
 "duration": 1.0,
@@ -228,7 +229,7 @@ animations = [{
 }],
 "loop": 1,
 "name": &"idle",
-"speed": 5.0
+"speed": 7.0
 }, {
 "frames": [{
 "duration": 1.0,
@@ -269,12 +270,24 @@ animations = [{
 }],
 "loop": 1,
 "name": &"run",
-"speed": 5.0
+"speed": 14.0
 }]
 
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_xrivr"]
+height = 32.0
+
 [node name="1st player character" type="CharacterBody2D" unique_id=757792488]
+collision_layer = 2
+script = ExtResource("1_hxqmh")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=1499632988]
 sprite_frames = SubResource("SpriteFrames_xrivr")
-animation = &"idle"
-frame_progress = 0.311983
+animation = &"run"
+frame_progress = 0.14569595
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=578331050]
+position = Vector2(0, -3)
+shape = SubResource("CapsuleShape2D_xrivr")
+
+[node name="Camera2D" type="Camera2D" parent="." unique_id=1744861266]
+position_smoothing_enabled = true
