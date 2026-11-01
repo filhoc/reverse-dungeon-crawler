@@ -1,0 +1,130 @@
+[gd_scene format=3 uid="uid://bhrlnts88qbwd"]
+
+[ext_resource type="Texture2D" uid="uid://dm5n4xn7v3tdk" path="res://assets/sprites/garfy spritesheet (fatdragon).png" id="1_pqt3l"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_8i1yr"]
+atlas = ExtResource("1_pqt3l")
+region = Rect2(64, 330, 64, 66)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_daa3f"]
+atlas = ExtResource("1_pqt3l")
+region = Rect2(64, 396, 64, 66)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_byga3"]
+atlas = ExtResource("1_pqt3l")
+region = Rect2(0, 396, 64, 66)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_axpjm"]
+atlas = ExtResource("1_pqt3l")
+region = Rect2(0, 330, 64, 66)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_xlgf3"]
+atlas = ExtResource("1_pqt3l")
+region = Rect2(64, 330, 64, 66)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_76y2e"]
+atlas = ExtResource("1_pqt3l")
+region = Rect2(128, 330, 64, 66)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_iat40"]
+atlas = ExtResource("1_pqt3l")
+region = Rect2(192, 330, 64, 66)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_2nq5h"]
+atlas = ExtResource("1_pqt3l")
+region = Rect2(128, 330, 64, 66)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_nehpp"]
+atlas = ExtResource("1_pqt3l")
+region = Rect2(256, 330, 64, 66)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_2a5lr"]
+atlas = ExtResource("1_pqt3l")
+region = Rect2(64, 396, 64, 66)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ikts2"]
+atlas = ExtResource("1_pqt3l")
+region = Rect2(0, 396, 64, 66)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_was7r"]
+atlas = ExtResource("1_pqt3l")
+region = Rect2(320, 330, 64, 66)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_13qdw"]
+animations = [{
+"frames": [],
+"loop": 1,
+"name": &"belly_flop",
+"speed": 5.0
+}, {
+"frames": [],
+"loop": 1,
+"name": &"breathe_fire",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_8i1yr")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_daa3f")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_byga3")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_axpjm")
+}],
+"loop": 1,
+"name": &"dead",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_xlgf3")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_76y2e")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_iat40")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_2nq5h")
+}],
+"loop": 1,
+"name": &"idle",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_nehpp")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_2a5lr")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ikts2")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_was7r")
+}],
+"loop": 1,
+"name": &"roll",
+"speed": 8.0
+}]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_b1lj4"]
+radius = 19.104973
+
+[node name="garfythegluttonous" type="CharacterBody2D" unique_id=1607562039]
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=1195241306]
+sprite_frames = SubResource("SpriteFrames_13qdw")
+animation = &"breathe_fire"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=273871328]
+position = Vector2(0, 6)
+shape = SubResource("CircleShape2D_b1lj4")
+
+[node name="Camera2D" type="Camera2D" parent="." unique_id=298700371]
