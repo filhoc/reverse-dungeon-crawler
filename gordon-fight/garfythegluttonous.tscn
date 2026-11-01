@@ -309,8 +309,8 @@ animations = [{
 position = Vector2(92, -73)
 scale = Vector2(5, 5)
 sprite_frames = SubResource("SpriteFrames_13qdw")
-animation = &"idle"
-frame_progress = 0.81157994
+animation = &"breathe_fire"
+frame_progress = 0.34304616
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=273871328]
 position = Vector2(115, -29)
@@ -325,8 +325,7 @@ script = ExtResource("2_7t42u")
 position = Vector2(-252, -91.00001)
 scale = Vector2(9, 6)
 sprite_frames = SubResource("SpriteFrames_xrivr")
-frame = 11
-frame_progress = 0.39781457
+frame_progress = 0.23896837
 
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="firebreath" unique_id=136904028]
 position = Vector2(-246.99998, 20.000002)
