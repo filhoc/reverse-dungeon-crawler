@@ -123,17 +123,19 @@ animations = [{
 }]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_7o7qx"]
-height = 50.0
+radius = 5.0
+height = 18.0
 
-[node name="warrior" type="Node2D" unique_id=1051920417]
+[node name="warrior" type="Node2D" unique_id=1051920417 groups=["enemy"]]
 script = ExtResource("1_373gj")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=1094449292]
 texture_filter = 1
 position = Vector2(-2, 12)
+scale = Vector2(0.5, 0.5)
 sprite_frames = SubResource("SpriteFrames_373gj")
 animation = &"run"
-frame_progress = 0.6899247
+frame_progress = 0.3723101
 
 [node name="left" type="RayCast2D" parent="." unique_id=509852396]
 target_position = Vector2(-18, 0)
@@ -144,5 +146,5 @@ target_position = Vector2(18, 0)
 [node name="killzone" parent="." unique_id=252532267 instance=ExtResource("2_pkbmn")]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="killzone" unique_id=2051199426]
-position = Vector2(-3, 8)
+position = Vector2(-2, 10)
 shape = SubResource("CapsuleShape2D_7o7qx")

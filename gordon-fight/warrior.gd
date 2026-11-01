@@ -26,3 +26,11 @@ func _process(delta: float) -> void:
 		elif direction > 0:
 			$AnimatedSprite2D.flip_h = false
 			animated_sprite_2d.play("run") 
+			
+var health = 100
+
+func take_damage(damage):
+	health -= damage
+
+	if health <= 0:
+		queue_free()
