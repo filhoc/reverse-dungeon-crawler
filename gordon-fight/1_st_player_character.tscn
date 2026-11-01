@@ -156,10 +156,13 @@ animations = [{
 }, {
 "duration": 1.0,
 "texture": SubResource("AtlasTexture_nboy7")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_t5l0a")
 }],
 "loop": 1,
 "name": &"idle",
-"speed": 3.0
+"speed": 2.0
 }, {
 "frames": [{
 "duration": 1.0,
@@ -212,8 +215,8 @@ script = ExtResource("1_hxqmh")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=1499632988]
 sprite_frames = SubResource("SpriteFrames_xrivr")
-animation = &"attack"
-frame_progress = 0.7388836
+animation = &"idle"
+frame_progress = 0.99792117
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=578331050]
 position = Vector2(0, -3)

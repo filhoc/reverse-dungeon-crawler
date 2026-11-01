@@ -42,7 +42,7 @@ position = Vector2(596, -3)
 shape = SubResource("WorldBoundaryShape2D_48hld")
 
 [node name="garfythegluttonous" parent="." unique_id=1607562039 instance=ExtResource("2_xcfcc")]
-position = Vector2(991, 618)
+position = Vector2(911, 583)
 
 [node name="warrior" parent="." unique_id=1051920417 instance=ExtResource("1_na6m6")]
 position = Vector2(131, 606)

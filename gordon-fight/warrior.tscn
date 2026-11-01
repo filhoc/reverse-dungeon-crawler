@@ -135,7 +135,7 @@ position = Vector2(-2, 12)
 scale = Vector2(0.5, 0.5)
 sprite_frames = SubResource("SpriteFrames_373gj")
 animation = &"run"
-frame_progress = 0.3723101
+frame_progress = 0.83362865
 
 [node name="left" type="RayCast2D" parent="." unique_id=509852396]
 target_position = Vector2(-18, 0)

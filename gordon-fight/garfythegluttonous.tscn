@@ -310,7 +310,7 @@ position = Vector2(92, -73)
 scale = Vector2(5, 5)
 sprite_frames = SubResource("SpriteFrames_13qdw")
 animation = &"breathe_fire"
-frame_progress = 0.91930103
+frame_progress = 0.9998534
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=273871328]
 position = Vector2(2, 6)
@@ -322,12 +322,13 @@ shape = SubResource("CircleShape2D_b1lj4")
 script = ExtResource("2_7t42u")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="firebreath" unique_id=1730197682]
-position = Vector2(-253, -91.00001)
+position = Vector2(-252, -91.00001)
 scale = Vector2(9, 6)
 sprite_frames = SubResource("SpriteFrames_xrivr")
-frame_progress = 0.8403441
+frame = 11
+frame_progress = 0.39781457
 
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="firebreath" unique_id=136904028]
-position = Vector2(-248, 22)
+position = Vector2(-246.99998, 20.000002)
 scale = Vector2(22.986607, 7.6874995)
 polygon = PackedVector2Array(10, 0, 2.8151436, 4.1348305, -10, 10, -11.751578, 1.1252751, -10, -10)
