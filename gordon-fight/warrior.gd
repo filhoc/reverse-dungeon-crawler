@@ -27,6 +27,8 @@ func _process(delta: float) -> void:
 			$AnimatedSprite2D.flip_h = false
 			animated_sprite_2d.play("run") 
 			
+			
+			
 var health = 100
 
 func take_damage(damage):

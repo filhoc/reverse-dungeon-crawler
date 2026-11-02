@@ -2,7 +2,6 @@
 
 [ext_resource type="Texture2D" uid="uid://d2hj8qdtptmw7" path="res://assets/sprites/first_boss_animated_nobackground.png" id="1_27hse"]
 [ext_resource type="Script" uid="uid://pfdfb88rvb1f" path="res://1_st_player_character.gd" id="1_hxqmh"]
-[ext_resource type="Script" uid="uid://cjbjg5hu1aurj" path="res://area_2d.gd" id="3_jifcc"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_hxqmh"]
 atlas = ExtResource("1_27hse")
@@ -211,8 +210,8 @@ animations = [{
 height = 32.0
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_13qdw"]
-radius = 12.0
-height = 44.0
+radius = 17.0
+height = 58.0
 
 [node name="1st player character" type="CharacterBody2D" unique_id=757792488]
 collision_layer = 2
@@ -221,18 +220,14 @@ script = ExtResource("1_hxqmh")
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=1499632988]
 sprite_frames = SubResource("SpriteFrames_xrivr")
 animation = &"attack"
-frame_progress = 0.87598884
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=578331050]
+[node name="body_hitbox" type="CollisionShape2D" parent="." unique_id=578331050]
 shape = SubResource("CapsuleShape2D_xrivr")
 
 [node name="Camera2D" type="Camera2D" parent="." unique_id=1744861266]
 zoom = Vector2(2, 2)
 position_smoothing_enabled = true
 
-[node name="batswing" type="Area2D" parent="." unique_id=315562661]
-script = ExtResource("3_jifcc")
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="batswing" unique_id=458407051]
-position = Vector2(-23, 0)
+[node name="weapon_hitbox" type="CollisionShape2D" parent="." unique_id=458407051]
+position = Vector2(-26, 3)
 shape = SubResource("CapsuleShape2D_13qdw")
