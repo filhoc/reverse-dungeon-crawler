@@ -9,7 +9,13 @@ func _physics_process(delta: float) -> void:
 
 	if Input.is_action_just_pressed("jump") and is_on_floor():
 		velocity.y = JUMP_VELOCITY
-
+	
+	if Input.is_action_just_pressed("primary_attack"):
+		$AnimatedSprite2D.play("attack")
+	
+	
+	
+	
 	var direction := Input.get_axis("left", "right")
 
 	if direction:
