@@ -125,8 +125,8 @@ animations = [{
 }]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_02ol6"]
-radius = 19.0
-height = 70.0
+radius = 17.0
+height = 56.0
 
 [node name="gorrila" type="CharacterBody2D" unique_id=17873438]
 script = ExtResource("1_nuegi")
@@ -137,7 +137,7 @@ sprite_frames = SubResource("SpriteFrames_jgkqa")
 animation = &"death"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=153287414]
-position = Vector2(-32, -4)
+position = Vector2(-32, -3)
 shape = SubResource("CapsuleShape2D_02ol6")
 
 [node name="Camera2D" type="Camera2D" parent="." unique_id=877878705]
