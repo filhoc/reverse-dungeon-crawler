@@ -29,10 +29,11 @@ func _process(delta: float) -> void:
 			
 			
 			
-var health = 100
 
-func take_damage(damage):
-	health -= damage
 
-	if health <= 0:
-		queue_free()
+
+	
+
+
+func _on_hitbox_area_entered(area: Area2D) -> void:
+	queue_free()
