@@ -1,6 +1,6 @@
-[gd_scene format=3 uid="uid://3x4suw0oaneh"]
+[gd_scene format=3 uid="uid://ca2n0wjd0qqiq"]
 
-[ext_resource type="Script" path="res://gorrila.gd" id="1_nuegi"]
+[ext_resource type="Script" uid="uid://hyuvxa6xrpcb" path="res://gorrila.gd" id="1_nuegi"]
 [ext_resource type="Texture2D" uid="uid://dwcf7k8061ird" path="res://assets/sprites/gorilla/sprite sheet (1).png" id="2_w4rgy"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_0f5da"]

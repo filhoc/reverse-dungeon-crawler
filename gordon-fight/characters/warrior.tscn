@@ -1,6 +1,6 @@
-[gd_scene format=3 uid="uid://bakn7behhkif8"]
+[gd_scene format=3 uid="uid://w8e6pocxnkb1"]
 
-[ext_resource type="Script" path="res://warrior.gd" id="1_373gj"]
+[ext_resource type="Script" uid="uid://bu3nogmc5k8il" path="res://warrior.gd" id="1_373gj"]
 [ext_resource type="Texture2D" uid="uid://vdnt42mc2xjo" path="res://assets/sprites/warrior_animated-removebg-preview.png" id="2_373gj"]
 [ext_resource type="PackedScene" uid="uid://u6gp86vroh4y" path="res://killzone.tscn" id="2_pkbmn"]
 
