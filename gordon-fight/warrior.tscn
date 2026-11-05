@@ -1,6 +1,6 @@
-[gd_scene format=3 uid="uid://bakn7behhkif8"]
+[gd_scene format=3 uid="uid://w8e6pocxnkb1"]
 
-[ext_resource type="Script" path="res://warrior.gd" id="1_373gj"]
+[ext_resource type="Script" uid="uid://bu3nogmc5k8il" path="res://warrior.gd" id="1_373gj"]
 [ext_resource type="Texture2D" uid="uid://vdnt42mc2xjo" path="res://assets/sprites/warrior_animated-removebg-preview.png" id="2_373gj"]
 [ext_resource type="PackedScene" uid="uid://u6gp86vroh4y" path="res://killzone.tscn" id="2_pkbmn"]
 
@@ -126,13 +126,10 @@ animations = [{
 radius = 5.0
 height = 18.0
 
-<<<<<<< HEAD
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_xrivr"]
 radius = 5.0
 height = 18.0
 
-=======
->>>>>>> parent of b9c4a75 (change)
 [node name="warrior" type="Node2D" unique_id=1051920417 groups=["enemy"]]
 script = ExtResource("1_373gj")
 
@@ -155,16 +152,12 @@ target_position = Vector2(18, 0)
 [node name="CollisionShape2D" type="CollisionShape2D" parent="killzone" unique_id=2051199426]
 position = Vector2(-2, 10)
 shape = SubResource("CapsuleShape2D_7o7qx")
-<<<<<<< HEAD
 
-[node name="hitbox" type="Area2D" parent="." unique_id=544548222]
+[node name="hurtbox" type="Area2D" parent="." unique_id=501939311]
 collision_mask = 4
 
-[node name="hitbox" type="CollisionShape2D" parent="hitbox" unique_id=1191765559]
+[node name="hitbox" type="CollisionShape2D" parent="hurtbox" unique_id=1921460270]
 position = Vector2(-2, 10)
 shape = SubResource("CapsuleShape2D_xrivr")
 
-[connection signal="area_entered" from="hitbox" to="." method="_on_hitbox_area_entered"]
-[connection signal="body_entered" from="hitbox" to="." method="_on_hitbox_body_entered"]
-=======
->>>>>>> parent of b9c4a75 (change)
+[connection signal="area_entered" from="hurtbox" to="." method="_on_hurtbox_area_entered"]

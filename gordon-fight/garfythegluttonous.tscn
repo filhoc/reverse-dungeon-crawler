@@ -1,5 +1,6 @@
 [gd_scene format=3 uid="uid://cvc8c4wfh0uev"]
 
+[ext_resource type="Script" uid="uid://byhjxkgqknfbb" path="res://garfythegluttonous.gd" id="1_l1oi8"]
 [ext_resource type="Texture2D" uid="uid://dm5n4xn7v3tdk" path="res://assets/sprites/garfy spritesheet (fatdragon).png" id="1_pqt3l"]
 [ext_resource type="Script" path="res://firebreath.gd" id="2_7t42u"]
 [ext_resource type="Texture2D" uid="uid://ce6lytpw1h3bv" path="res://assets/sprites/firebreath (1).png" id="3_l1oi8"]
@@ -220,7 +221,7 @@ animations = [{
 }]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_b1lj4"]
-radius = 80.024994
+radius = 73.33485
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_t6xsb"]
 atlas = ExtResource("3_l1oi8")
@@ -303,14 +304,17 @@ animations = [{
 "speed": 10.0
 }]
 
+[sub_resource type="CircleShape2D" id="CircleShape2D_xrivr"]
+radius = 101.0198
+
 [node name="garfythegluttonous" type="CharacterBody2D" unique_id=1607562039]
+script = ExtResource("1_l1oi8")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=1195241306]
 position = Vector2(92, -73)
 scale = Vector2(5, 5)
 sprite_frames = SubResource("SpriteFrames_13qdw")
-animation = &"breathe_fire"
-frame_progress = 0.34304616
+animation = &"idle"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=273871328]
 position = Vector2(115, -29)
@@ -319,15 +323,24 @@ shape = SubResource("CircleShape2D_b1lj4")
 [node name="Camera2D" type="Camera2D" parent="." unique_id=298700371]
 
 [node name="firebreath" type="Area2D" parent="." unique_id=231818736]
+collision_layer = 4
 script = ExtResource("2_7t42u")
 
-[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="firebreath" unique_id=1730197682]
+[node name="fire" type="AnimatedSprite2D" parent="firebreath" unique_id=1730197682]
 position = Vector2(-252, -91.00001)
 scale = Vector2(9, 6)
 sprite_frames = SubResource("SpriteFrames_xrivr")
 frame_progress = 0.23896837
 
-[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="firebreath" unique_id=136904028]
+[node name="fire_hitbox" type="CollisionPolygon2D" parent="firebreath" unique_id=136904028]
 position = Vector2(-246.99998, 20.000002)
 scale = Vector2(22.986607, 7.6874995)
 polygon = PackedVector2Array(10, 0, 2.8151436, 4.1348305, -10, 10, -11.751578, 1.1252751, -10, -10)
+disabled = true
+
+[node name="bellyflop" type="Area2D" parent="." unique_id=1815953752]
+
+[node name="flop_hitbox" type="CollisionShape2D" parent="bellyflop" unique_id=1050035734]
+position = Vector2(105, -15)
+shape = SubResource("CircleShape2D_xrivr")
+disabled = true

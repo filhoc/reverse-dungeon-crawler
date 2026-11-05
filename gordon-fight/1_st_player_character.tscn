@@ -1,7 +1,7 @@
-[gd_scene format=3 uid="uid://ddc0hkpwggixo"]
+[gd_scene format=3 uid="uid://bg4spvg5x8jur"]
 
 [ext_resource type="Texture2D" uid="uid://d2hj8qdtptmw7" path="res://assets/sprites/first_boss_animated_nobackground.png" id="1_27hse"]
-[ext_resource type="Script" path="res://characters/1_st_player_character.gd" id="1_hxqmh"]
+[ext_resource type="Script" uid="uid://pfdfb88rvb1f" path="res://1_st_player_character.gd" id="1_hxqmh"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_hxqmh"]
 atlas = ExtResource("1_27hse")
@@ -210,8 +210,8 @@ animations = [{
 height = 32.0
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_b1lj4"]
-radius = 12.0
-height = 46.0
+radius = 13.0
+height = 42.0
 
 [node name="1st player character" type="CharacterBody2D" unique_id=757792488]
 collision_layer = 2
@@ -219,7 +219,8 @@ script = ExtResource("1_hxqmh")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=1499632988]
 sprite_frames = SubResource("SpriteFrames_xrivr")
-animation = &"idle"
+animation = &"attack"
+frame = 4
 
 [node name="body_hitbox" type="CollisionShape2D" parent="." unique_id=578331050]
 shape = SubResource("CapsuleShape2D_xrivr")
@@ -228,10 +229,10 @@ shape = SubResource("CapsuleShape2D_xrivr")
 zoom = Vector2(2, 2)
 position_smoothing_enabled = true
 
-[node name="weapon" type="Area2D" parent="." unique_id=1640572026]
+[node name="weapon" type="Area2D" parent="." unique_id=1636523552]
 collision_layer = 4
 
-[node name="weapon_hitbox" type="CollisionShape2D" parent="weapon" unique_id=796689288]
-position = Vector2(-22, 2)
+[node name="weapon_hitbox" type="CollisionShape2D" parent="weapon" unique_id=342821513]
+position = Vector2(-24, 2)
 shape = SubResource("CapsuleShape2D_b1lj4")
 disabled = true

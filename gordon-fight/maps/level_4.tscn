@@ -1,6 +1,5 @@
 [gd_scene format=3 uid="uid://da0uu5xpb5g1v"]
 
-[ext_resource type="PackedScene" uid="uid://w8e6pocxnkb1" path="res://warrior.tscn" id="1_na6m6"]
 [ext_resource type="PackedScene" uid="uid://bhrlnts88qbwd" path="res://garfythegluttonous.tscn" id="2_xcfcc"]
 
 [sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_xrivr"]
@@ -43,6 +42,3 @@ shape = SubResource("WorldBoundaryShape2D_48hld")
 
 [node name="garfythegluttonous" parent="." unique_id=1607562039 instance=ExtResource("2_xcfcc")]
 position = Vector2(911, 583)
-
-[node name="warrior" parent="." unique_id=1051920417 instance=ExtResource("1_na6m6")]
-position = Vector2(131, 606)
