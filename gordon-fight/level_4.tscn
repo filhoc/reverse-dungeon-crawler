@@ -1,0 +1,44 @@
+[gd_scene format=3 uid="uid://6d4tjjh6dcxh"]
+
+[ext_resource type="PackedScene" uid="uid://bhrlnts88qbwd" path="res://garfythegluttonous.tscn" id="2_xcfcc"]
+
+[sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_xrivr"]
+normal = Vector2(-0.01639124, -0.99986565)
+
+[sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_13qdw"]
+normal = Vector2(-1, 0)
+
+[sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_b1lj4"]
+normal = Vector2(1, 0)
+
+[sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_48hld"]
+normal = Vector2(-0.019227214, 0.99981517)
+
+[node name="level 4" type="Node2D" unique_id=2037761842]
+
+[node name="bottom_boundary" type="StaticBody2D" parent="." unique_id=378783869]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="bottom_boundary" unique_id=653834812]
+position = Vector2(596, 649)
+shape = SubResource("WorldBoundaryShape2D_xrivr")
+
+[node name="right_boundary" type="StaticBody2D" parent="." unique_id=1768608034]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="right_boundary" unique_id=830763448]
+position = Vector2(1152, 329)
+shape = SubResource("WorldBoundaryShape2D_13qdw")
+
+[node name="left_boundary" type="StaticBody2D" parent="." unique_id=2052888714]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="left_boundary" unique_id=1586352592]
+position = Vector2(0, 329)
+shape = SubResource("WorldBoundaryShape2D_b1lj4")
+
+[node name="top_boundary" type="StaticBody2D" parent="." unique_id=1060426097]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="top_boundary" unique_id=498604182]
+position = Vector2(596, -3)
+shape = SubResource("WorldBoundaryShape2D_48hld")
+
+[node name="garfythegluttonous" parent="." unique_id=1607562039 instance=ExtResource("2_xcfcc")]
+position = Vector2(907, 572)
