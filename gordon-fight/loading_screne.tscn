@@ -12,9 +12,6 @@ offset_left = -11.0
 grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("1_x24eb")
-loading_screen_path = "uid://dybyfe2kbk6ep"
-gallery_scene_path = "uid://b48tsos3g1iwj"
-credits_scene_path = "uid://bwxpbbtcdl3jo"
 
 [node name="TextureRect" type="TextureRect" parent="." unique_id=10616125]
 layout_mode = 1
