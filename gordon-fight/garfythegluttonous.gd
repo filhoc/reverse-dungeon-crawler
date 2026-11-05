@@ -23,6 +23,7 @@ func _physics_process(delta: float) -> void:
 	if Input.is_action_just_pressed("primary_attack") and not is_attacking:
 		is_attacking = true
 		$AnimatedSprite2D.play("breathe_fire")
+		$firebreath/fire.play("default")
 		$firebreath/fire_hitbox.disabled = false
 		
 		# Create an automatic 0.4-second timer to reset the attack state
@@ -33,7 +34,7 @@ func _physics_process(delta: float) -> void:
 		$AnimatedSprite2D.play("belly_flop")
 		$bellyflop/flop_hitbox.disabled = false
 		
-		
+		get_tree().create_timer(0.6).timeout.connect(func(): is_attacking = false)
 
 	var direction := Input.get_axis("left", "right")
 	

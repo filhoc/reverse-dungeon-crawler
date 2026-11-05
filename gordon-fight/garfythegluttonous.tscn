@@ -332,7 +332,7 @@ scale = Vector2(9, 6)
 sprite_frames = SubResource("SpriteFrames_xrivr")
 frame_progress = 0.23896837
 
-[node name="hitbox" type="CollisionPolygon2D" parent="firebreath" unique_id=136904028]
+[node name="fire_hitbox" type="CollisionPolygon2D" parent="firebreath" unique_id=136904028]
 position = Vector2(-246.99998, 20.000002)
 scale = Vector2(22.986607, 7.6874995)
 polygon = PackedVector2Array(10, 0, 2.8151436, 4.1348305, -10, 10, -11.751578, 1.1252751, -10, -10)
@@ -340,7 +340,7 @@ disabled = true
 
 [node name="bellyflop" type="Area2D" parent="." unique_id=1815953752]
 
-[node name="hitbox" type="CollisionShape2D" parent="bellyflop" unique_id=1050035734]
+[node name="flop_hitbox" type="CollisionShape2D" parent="bellyflop" unique_id=1050035734]
 position = Vector2(105, -15)
 shape = SubResource("CircleShape2D_xrivr")
 disabled = true
