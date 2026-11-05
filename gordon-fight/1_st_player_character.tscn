@@ -1,7 +1,7 @@
 [gd_scene format=3 uid="uid://ddc0hkpwggixo"]
 
 [ext_resource type="Texture2D" uid="uid://d2hj8qdtptmw7" path="res://assets/sprites/first_boss_animated_nobackground.png" id="1_27hse"]
-[ext_resource type="Script" path="res://1_st_player_character.gd" id="1_hxqmh"]
+[ext_resource type="Script" path="res://characters/1_st_player_character.gd" id="1_hxqmh"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_hxqmh"]
 atlas = ExtResource("1_27hse")
