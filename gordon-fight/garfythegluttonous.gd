@@ -1,6 +1,12 @@
 extends CharacterBody2D
-@onready var weapon: Area2D = $weapon
-@onready var weapon_hitbox: CollisionShape2D = $weapon/weapon_hitbox
+@onready var firebreath: Area2D = $firebreath
+@onready var fire: AnimatedSprite2D = $firebreath/fire
+@onready var fire_hitbox: CollisionPolygon2D = $firebreath/fire_hitbox
+@onready var bellyflop: Area2D = $bellyflop
+@onready var flop_hitbox: CollisionShape2D = $bellyflop/flop_hitbox
+
+
+
 
 const SPEED = 300.0
 const JUMP_VELOCITY = -400.0
@@ -16,11 +22,18 @@ func _physics_process(delta: float) -> void:
 
 	if Input.is_action_just_pressed("primary_attack") and not is_attacking:
 		is_attacking = true
-		$AnimatedSprite2D.play("attack")
-		$weapon/weapon_hitbox.disabled = false
+		$AnimatedSprite2D.play("breathe_fire")
+		$firebreath/fire_hitbox.disabled = false
 		
 		# Create an automatic 0.4-second timer to reset the attack state
-		get_tree().create_timer(0.4).timeout.connect(func(): is_attacking = false)
+		get_tree().create_timer(0.6).timeout.connect(func(): is_attacking = false)
+		
+	if Input.is_action_just_pressed("secondary_attack") and not is_attacking:
+		is_attacking = true
+		$AnimatedSprite2D.play("belly_flop")
+		$bellyflop/flop_hitbox.disabled = false
+		
+		
 
 	var direction := Input.get_axis("left", "right")
 	
