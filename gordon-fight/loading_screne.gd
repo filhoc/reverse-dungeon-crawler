@@ -7,7 +7,7 @@ const CREDITS_SCENE_PATH := "res://sceen/credits.tscn"
 @onready var play_button: Button = $"level 1"
 @onready var gallery_button: Button = $gallery
 @onready var credits_button: Button = $credits
-@onready var exit_button: Button = $exit
+@onready var exit_button: Button = $exi
 
 
 func _ready() -> void:
