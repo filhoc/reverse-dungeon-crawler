@@ -341,6 +341,6 @@ disabled = true
 [node name="bellyflop" type="Area2D" parent="." unique_id=1815953752]
 
 [node name="flop_hitbox" type="CollisionShape2D" parent="bellyflop" unique_id=1050035734]
-position = Vector2(105, -15)
+position = Vector2(112, -25)
 shape = SubResource("CircleShape2D_xrivr")
 disabled = true

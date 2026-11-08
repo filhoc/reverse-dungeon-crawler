@@ -28,6 +28,7 @@ func _process(delta: float) -> void:
 			animated_sprite_2d.play("run") 
 			
 			
+
 			
 
 
