@@ -3,6 +3,7 @@
 [ext_resource type="Script" uid="uid://bu3nogmc5k8il" path="res://characters/warrior.gd" id="1_373gj"]
 [ext_resource type="Texture2D" uid="uid://vdnt42mc2xjo" path="res://assets/sprites/warrior_animated-removebg-preview.png" id="2_373gj"]
 [ext_resource type="PackedScene" uid="uid://u6gp86vroh4y" path="res://killzone.tscn" id="2_pkbmn"]
+[ext_resource type="Script" uid="uid://cybtt8gsclon4" path="res://warrior_hurtbox.gd" id="4_7o7qx"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_373gj"]
 atlas = ExtResource("2_373gj")
@@ -81,7 +82,7 @@ animations = [{
 }],
 "loop": 1,
 "name": &"attack",
-"speed": 6.0
+"speed": 8.0
 }, {
 "frames": [{
 "duration": 1.0,
@@ -139,6 +140,7 @@ position = Vector2(-2, 12)
 scale = Vector2(0.5, 0.5)
 sprite_frames = SubResource("SpriteFrames_373gj")
 animation = &"attack"
+frame_progress = 0.86465496
 
 [node name="left" type="RayCast2D" parent="." unique_id=509852396]
 target_position = Vector2(-18, 0)
@@ -155,11 +157,10 @@ disabled = true
 
 [node name="hurtbox" type="Area2D" parent="." unique_id=501939311]
 collision_mask = 4
+script = ExtResource("4_7o7qx")
 
 [node name="hitbox" type="CollisionShape2D" parent="hurtbox" unique_id=1921460270]
 position = Vector2(-2, 10)
 shape = SubResource("CapsuleShape2D_xrivr")
-
-[node name="Timer" type="Timer" parent="." unique_id=1398297615]
 
 [connection signal="area_entered" from="hurtbox" to="." method="_on_hurtbox_area_entered"]

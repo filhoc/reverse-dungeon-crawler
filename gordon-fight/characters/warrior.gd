@@ -1,5 +1,8 @@
 extends Node2D
 
+@onready var killzone: Area2D = $killzone
+@onready var collision_shape_2d: CollisionShape2D = $killzone/CollisionShape2D
+
 @export var speed: float = 80.0
 
 var player: CharacterBody2D
@@ -17,13 +20,13 @@ func _process(delta: float) -> void:
 		global_position.x += direction * speed * delta
 
 		# Face the direction the warrior moves
-		if direction < 0:
+		if direction < 0 and not killzone.enemy_attacking:
 			
 			$AnimatedSprite2D.flip_h = true
 			animated_sprite_2d.play("run")
 			
 			
-		elif direction > 0:
+		elif direction > 0 and not killzone.enemy_attacking:
 			$AnimatedSprite2D.flip_h = false
 			animated_sprite_2d.play("run") 
 			
