@@ -11,7 +11,7 @@ var player: CharacterBody2D
 
 
 func _ready() -> void:
-	player = get_parent().get_node("1st player character")
+	player = get_tree().get_first_node_in_group("player")
 
 func _process(delta: float) -> void:
 	if player:
@@ -30,11 +30,6 @@ func _process(delta: float) -> void:
 			$AnimatedSprite2D.flip_h = false
 			animated_sprite_2d.play("run") 
 			
-			
-
-			
-
-
 
 func _on_hurtbox_area_entered(area: Area2D) -> void:
 	queue_free()

@@ -148,7 +148,7 @@ animations = [{
 }],
 "loop": 1,
 "name": &"attack",
-"speed": 16.0
+"speed": 15.0
 }, {
 "frames": [{
 "duration": 1.0,
@@ -213,7 +213,12 @@ height = 32.0
 radius = 13.0
 height = 42.0
 
-[node name="1st player character" type="CharacterBody2D" unique_id=757792488]
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_hxqmh"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_xrivr"]
+bg_color = Color(0.76, 0.1502267, 0.12920001, 1)
+
+[node name="1st player character" type="CharacterBody2D" unique_id=757792488 groups=["player"]]
 collision_layer = 2
 script = ExtResource("1_hxqmh")
 
@@ -236,3 +241,13 @@ collision_layer = 4
 position = Vector2(-24, 2)
 shape = SubResource("CapsuleShape2D_b1lj4")
 disabled = true
+
+[node name="beman_healthbar" type="ProgressBar" parent="." unique_id=1122384338]
+offset_left = -30.0
+offset_top = -39.0
+offset_right = 30.0
+offset_bottom = -26.0
+theme_override_styles/background = SubResource("StyleBoxEmpty_hxqmh")
+theme_override_styles/fill = SubResource("StyleBoxFlat_xrivr")
+max_value = 50.0
+show_percentage = false

@@ -127,7 +127,7 @@ animations = [{
 "texture": SubResource("AtlasTexture_3d0ai")
 }],
 "loop": 1,
-"name": &"belly_flop",
+"name": &"belly_flop (primary)",
 "speed": 7.0
 }, {
 "frames": [{
@@ -156,7 +156,7 @@ animations = [{
 "texture": SubResource("AtlasTexture_oquj0")
 }],
 "loop": 1,
-"name": &"breathe_fire",
+"name": &"breathe_fire (secondary)",
 "speed": 10.0
 }, {
 "frames": [{
@@ -217,7 +217,7 @@ animations = [{
 }],
 "loop": 1,
 "name": &"roll",
-"speed": 9.0
+"speed": 8.0
 }]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_b1lj4"]
@@ -307,6 +307,11 @@ animations = [{
 [sub_resource type="CircleShape2D" id="CircleShape2D_xrivr"]
 radius = 101.0198
 
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_l1oi8"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_tif80"]
+bg_color = Color(0.77866334, 0.0717848, 7.6046585e-06, 1)
+
 [node name="garfythegluttonous" type="CharacterBody2D" unique_id=1607562039]
 script = ExtResource("1_l1oi8")
 
@@ -315,6 +320,7 @@ position = Vector2(92, -73)
 scale = Vector2(5, 5)
 sprite_frames = SubResource("SpriteFrames_13qdw")
 animation = &"idle"
+frame_progress = 0.22596368
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=273871328]
 position = Vector2(115, -29)
@@ -344,3 +350,12 @@ disabled = true
 position = Vector2(112, -25)
 shape = SubResource("CircleShape2D_xrivr")
 disabled = true
+
+[node name="garfy_healthbar" type="ProgressBar" parent="." unique_id=13208693]
+offset_left = -137.0
+offset_top = -285.0
+offset_right = 337.0
+offset_bottom = -222.0
+theme_override_styles/background = SubResource("StyleBoxEmpty_l1oi8")
+theme_override_styles/fill = SubResource("StyleBoxFlat_tif80")
+show_percentage = false

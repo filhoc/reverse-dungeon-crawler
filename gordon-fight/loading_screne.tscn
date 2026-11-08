@@ -1,7 +1,7 @@
 [gd_scene format=3 uid="uid://pg8pc4418i84"]
 
 [ext_resource type="Script" uid="uid://caa2pqeltc3ko" path="res://loading_screne.gd" id="1_x24eb"]
-[ext_resource type="Texture2D" uid="uid://d0wxfd70qo1e8" path="res://assets/sprites/cccccc.png" id="2_8v4rt"]
+[ext_resource type="Texture2D" uid="uid://d1jys46lkqnjc" path="res://assets/sprites/cccccc.png" id="2_8v4rt"]
 
 [node name="loading screne" type="Control" unique_id=526607391]
 layout_mode = 3
@@ -19,14 +19,15 @@ anchors_preset = -1
 anchor_top = -0.38900003
 anchor_right = 1.0
 anchor_bottom = 1.0
-offset_left = -7.0
-offset_top = 258.07202
-offset_right = 830.0
-offset_bottom = 772.0
+offset_left = 12.0
+offset_top = 252.07202
+offset_right = 808.0841
+offset_bottom = 802.1006
 grow_horizontal = 2
 grow_vertical = 2
 scale = Vector2(0.58751947, 0.4482448)
 texture = ExtResource("2_8v4rt")
+expand_mode = 2
 
 [node name="level 1" type="Button" parent="." unique_id=61280770]
 layout_mode = 1
@@ -35,10 +36,10 @@ anchor_left = 0.187
 anchor_top = 0.31500003
 anchor_right = 0.83000004
 anchor_bottom = 0.52000004
-offset_left = -0.4810028
-offset_top = -0.120010376
+offset_left = 14.518997
+offset_top = 1.8799896
 offset_right = -0.29003906
-offset_bottom = 0.039978027
+offset_bottom = 2.039978
 
 [node name="gallery" type="Button" parent="." unique_id=1181033567]
 layout_mode = 1
@@ -47,10 +48,10 @@ anchor_left = 0.18900001
 anchor_top = 0.55600005
 anchor_right = 0.49400002
 anchor_bottom = 0.748
-offset_left = 0.19299316
-offset_top = -0.2880249
-offset_right = 0.4779663
-offset_bottom = 0.29599
+offset_left = 12.192993
+offset_top = 2.711975
+offset_right = 12.477966
+offset_bottom = 3.29599
 
 [node name="credits" type="Button" parent="." unique_id=303822151]
 layout_mode = 1
@@ -59,10 +60,10 @@ anchor_left = 0.53300005
 anchor_top = 0.56
 anchor_right = 0.84000003
 anchor_bottom = 0.74500006
-offset_left = 0.120910645
-offset_top = 0.11999512
-offset_right = 0.079956055
-offset_bottom = 0.23995972
+offset_left = 4.1209106
+offset_top = 4.119995
+offset_right = 4.079956
+offset_bottom = 4.2399597
 
 [node name="exit" type="Button" parent="." unique_id=617641643]
 layout_mode = 1
@@ -71,7 +72,7 @@ anchor_left = 0.19700001
 anchor_top = 0.77300006
 anchor_right = 0.83300006
 anchor_bottom = 0.92700005
-offset_left = -0.11100769
-offset_top = 0.095947266
-offset_right = 0.22094727
-offset_bottom = 0.30395508
+offset_left = 9.888992
+offset_top = 9.095947
+offset_right = 1.2209473
+offset_bottom = 9.303955
