@@ -20,7 +20,7 @@ func _physics_process(delta: float) -> void:
 		$weapon/weapon_hitbox.disabled = false
 		
 		# Create an automatic 0.4-second timer to reset the attack state
-		get_tree().create_timer(0.4).timeout.connect(func(): is_attacking = false)
+		get_tree().create_timer(0.3).timeout.connect(func(): is_attacking = false)
 
 	var direction := Input.get_axis("left", "right")
 	
@@ -28,6 +28,7 @@ func _physics_process(delta: float) -> void:
 		velocity.x = direction * SPEED
 		if direction > 0:
 			$AnimatedSprite2D.flip_h = true
+			$weapon/weapon_hitbox.position.x = 24
 		elif direction < 0:
 			$AnimatedSprite2D.flip_h = false
 	else:

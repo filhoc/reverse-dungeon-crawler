@@ -148,7 +148,7 @@ animations = [{
 }],
 "loop": 1,
 "name": &"attack",
-"speed": 18.0
+"speed": 16.0
 }, {
 "frames": [{
 "duration": 1.0,
@@ -220,7 +220,7 @@ script = ExtResource("1_hxqmh")
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=1499632988]
 sprite_frames = SubResource("SpriteFrames_xrivr")
 animation = &"attack"
-frame_progress = 0.44999963
+frame = 7
 
 [node name="body_hitbox" type="CollisionShape2D" parent="." unique_id=578331050]
 shape = SubResource("CapsuleShape2D_xrivr")
