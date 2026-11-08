@@ -42,9 +42,20 @@ func _physics_process(delta: float) -> void:
 
 	if Input.is_action_just_pressed("primary_attack") and not is_attacking:
 		is_attacking = true
-		$AnimatedSprite2D.play("attack")
-		$weapon/weapon_hitbox.disabled = false
-		get_tree().create_timer(0.5).timeout.connect(func(): is_attacking = false)
+		$AnimatedSprite2D.play("breathe_fire")
+		$firebreath/fire.play("default")
+		$firebreath/fire_hitbox.disabled = false
+		
+		
+		get_tree().create_timer(0.6).timeout.connect(func(): is_attacking = false)
+		
+	if Input.is_action_just_pressed("secondary_attack") and not is_attacking:
+		is_attacking = true
+		$AnimatedSprite2D.play("belly_flop")
+		$bellyflop/flop_hitbox.disabled = false
+		
+		get_tree().create_timer(0.6).timeout.connect(func(): is_attacking = false)
+
 
 	var direction := Input.get_axis("left", "right")
 
@@ -60,7 +71,7 @@ func _physics_process(delta: float) -> void:
 
 	if not is_attacking:
 		if direction != 0:
-			$AnimatedSprite2D.play("run")
+			$AnimatedSprite2D.play("roll")
 		else:
 			$AnimatedSprite2D.play("idle")
 
