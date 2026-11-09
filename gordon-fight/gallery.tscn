@@ -5,7 +5,5 @@
 
 [node name="gallery" unique_id=743700449 instance=ExtResource("1_0uoo4")]
 
-[node name="InstructionSheetGordonFight" type="Sprite2D" parent="." index="0" unique_id=1652093124]
-position = Vector2(575, 328.12503)
-scale = Vector2(0.569, 0.45608822)
+[node name="Sprite2D" type="Sprite2D" parent="." index="0" unique_id=608270216]
 texture = ExtResource("2_31do6")

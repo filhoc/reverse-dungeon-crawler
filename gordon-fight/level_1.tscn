@@ -1,15 +1,40 @@
 [gd_scene format=3 uid="uid://dybyfe2kbk6ep"]
 
 [ext_resource type="PackedScene" uid="uid://w8e6pocxnkb1" path="res://warrior.tscn" id="1_hn12h"]
+[ext_resource type="PackedScene" uid="uid://bomxdm42vmles" path="res://map1.tscn" id="2_rka8t"]
 [ext_resource type="PackedScene" uid="uid://bg4spvg5x8jur" path="res://1_st_player_character.tscn" id="3_rka8t"]
 [ext_resource type="Script" uid="uid://bhbxsqoh4c01h" path="res://level_1.gd" id="4_pause"]
 [ext_resource type="Script" uid="uid://c88qwtbhgm76x" path="res://warrior_spawner.gd" id="5_rka8t"]
+
+[sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_jgkqa"]
+normal = Vector2(0.9995902, 0.028624296)
+
+[sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_ur7tp"]
+normal = Vector2(-1, 0)
+distance = -27.998344
 
 [sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_1hysq"]
 distance = -115.0
 
 [node name="level 1" type="Node2D" unique_id=87030626]
 script = ExtResource("4_pause")
+
+[node name="Filds" parent="." unique_id=741180020 instance=ExtResource("2_rka8t")]
+position = Vector2(-1, -68)
+
+[node name="StaticBody2D4" type="StaticBody2D" parent="Filds" unique_id=387541414]
+collision_mask = 20
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Filds/StaticBody2D4" unique_id=1133218849]
+position = Vector2(-146.72215, 6.47423)
+shape = SubResource("WorldBoundaryShape2D_jgkqa")
+
+[node name="StaticBody2D5" type="StaticBody2D" parent="Filds" unique_id=1954545997]
+collision_mask = 20
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Filds/StaticBody2D5" unique_id=1765131791]
+position = Vector2(118.45458, 7.997578)
+shape = SubResource("WorldBoundaryShape2D_ur7tp")
 
 [node name="warrior" parent="." unique_id=1051920417 instance=ExtResource("1_hn12h")]
 position = Vector2(-118, 83)

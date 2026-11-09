@@ -1,12 +1,12 @@
 extends Control
 
 const PLAY_SCENE_PATH := "res://level_1.tscn"
-const GALLERY_SCENE_PATH := "res://sceen/gallery.tscn"
+const GALLERY_SCENE_PATH := "res://sceen/instructions.tscn"
 const CREDITS_SCENE_PATH := "res://sceen/credits.tscn"
 
-@onready var play_button: Button = $"level 1"
+@onready var play_button: Button = $play
 @onready var gallery_button: Button = $instructions
-@onready var credits_button: Button = $credits
+@onready var credits_button: Button = $credit
 @onready var exit_button: Button = $exit
 
 

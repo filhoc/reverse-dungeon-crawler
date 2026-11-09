@@ -1,0 +1,36 @@
+[gd_scene format=3 uid="uid://bomxdm42vmles"]
+
+[ext_resource type="Texture2D" uid="uid://dhxc0lvhu4xxm" path="res://assets/sprites/filds.jpg" id="1_p84jh"]
+
+[sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_ur7tp"]
+normal = Vector2(0.99992335, -0.012379866)
+distance = -146.76015
+
+[sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_1hysq"]
+distance = -92.3823
+
+[sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_jgkqa"]
+normal = Vector2(-1, 0)
+distance = -146.91861
+
+[node name="Filds" type="Sprite2D" unique_id=741180020]
+position = Vector2(14, -1)
+scale = Vector2(3.714504, 2.625795)
+texture = ExtResource("1_p84jh")
+
+[node name="StaticBody2D3" type="StaticBody2D" parent="." unique_id=1501707414]
+
+[node name="CollisionShape2D3" type="CollisionShape2D" parent="StaticBody2D3" unique_id=1033118878]
+scale = Vector2(0.99999994, 1)
+shape = SubResource("WorldBoundaryShape2D_ur7tp")
+
+[node name="StaticBody2D" type="StaticBody2D" parent="." unique_id=1107245363]
+scale = Vector2(0.99999994, 1)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D" unique_id=1553980227]
+shape = SubResource("WorldBoundaryShape2D_1hysq")
+
+[node name="StaticBody2D2" type="StaticBody2D" parent="." unique_id=1198865077]
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="StaticBody2D2" unique_id=658105415]
+shape = SubResource("WorldBoundaryShape2D_jgkqa")

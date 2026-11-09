@@ -1,6 +1,6 @@
 extends Node2D
 
-const LOADING_SCREEN_PATH := "res://loading_screne.tscn"
+const LOADING_SCREEN_PATH := "res://control.tscn"
 
 var pause_layer: CanvasLayer
 

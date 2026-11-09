@@ -5,23 +5,27 @@
 
 [node name="Control" type="Control" unique_id=987746593]
 layout_mode = 3
-anchors_preset = 15
-anchor_right = 1.0
-anchor_bottom = 1.0
+anchor_right = 0.47900003
+anchor_bottom = 0.32700002
+offset_right = -503.80804
+offset_bottom = -211.89601
 grow_horizontal = 2
 grow_vertical = 2
 
 [node name="TextureRect" type="TextureRect" parent="." unique_id=1140521274]
 layout_mode = 1
 anchors_preset = -1
-anchor_right = 1.325
-anchor_bottom = 1.6600001
-offset_right = -372.40002
-offset_bottom = -423.68005
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -4.0
+offset_top = 1.0000305
+offset_right = 1474.0
+offset_bottom = 1077.0
+scale = Vector2(0.77156126, 0.6504186)
 texture = ExtResource("1_62e2m")
 script = ExtResource("2_qtu10")
 
-[node name="Button" type="Button" parent="TextureRect" unique_id=1065131483]
+[node name="exit" type="Button" parent="TextureRect" unique_id=1065131483]
 layout_mode = 1
 anchors_preset = -1
 anchor_left = 0.193
@@ -33,7 +37,7 @@ offset_top = -0.36798096
 offset_right = -0.3140869
 offset_bottom = 0.41992188
 
-[node name="Button2" type="Button" parent="TextureRect" unique_id=670567941]
+[node name="credit" type="Button" parent="TextureRect" unique_id=670567941]
 layout_mode = 1
 anchors_preset = -1
 anchor_left = 0.535
