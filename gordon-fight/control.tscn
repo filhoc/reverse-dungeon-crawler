@@ -1,0 +1,65 @@
+[gd_scene format=3 uid="uid://dr2y2eqyuxet7"]
+
+[ext_resource type="Texture2D" uid="uid://etfm24puf5xr" path="res://sceen/Screenshot 2026-11-09 at 7.07.47 PM.png" id="1_62e2m"]
+[ext_resource type="Script" uid="uid://benqw2rcnv6yc" path="res://texture_rect.gd" id="2_qtu10"]
+
+[node name="Control" type="Control" unique_id=987746593]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="TextureRect" type="TextureRect" parent="." unique_id=1140521274]
+layout_mode = 1
+anchors_preset = -1
+anchor_right = 1.325
+anchor_bottom = 1.6600001
+offset_right = -372.40002
+offset_bottom = -423.68005
+texture = ExtResource("1_62e2m")
+script = ExtResource("2_qtu10")
+
+[node name="Button" type="Button" parent="TextureRect" unique_id=1065131483]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.193
+anchor_top = 0.768
+anchor_right = 0.83900005
+anchor_bottom = 0.95500004
+offset_left = -0.5180054
+offset_top = -0.36798096
+offset_right = -0.3140869
+offset_bottom = 0.41992188
+
+[node name="Button2" type="Button" parent="TextureRect" unique_id=670567941]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.535
+anchor_top = 0.559
+anchor_right = 0.832
+anchor_bottom = 0.74300003
+offset_left = -0.41003418
+offset_top = 0.5159912
+offset_right = 0.36791992
+offset_bottom = 0.5319824
+
+[node name="instructions" type="Button" parent="TextureRect" unique_id=1930657801]
+layout_mode = 0
+offset_left = 292.0
+offset_top = 602.0
+offset_right = 770.0
+offset_bottom = 806.0
+
+[node name="play" type="Button" parent="TextureRect" unique_id=1458875065]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.19100001
+anchor_top = 0.30900002
+anchor_right = 0.82800007
+anchor_bottom = 0.52000004
+offset_left = 0.53396606
+offset_top = -0.4840088
+offset_right = 0.47192383
+offset_bottom = 0.47998047
