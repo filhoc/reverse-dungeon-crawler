@@ -1,37 +1,5 @@
 [gd_scene format=3 uid="uid://b2dc48hc3hwip"]
 
-[ext_resource type="Texture2D" uid="uid://byd285m2bii2k" path="res://assets/sprites/gorilla/20 Mine Themed 2D RPG Pixel Art Hintergründe (Digital Art).jpeg" id="1_e3fax"]
+[ext_resource type="PackedScene" uid="uid://b2dc48hc3hwip" path="res://gorrila map.tscn" id="1_e3fax"]
 
-[sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_1hysq"]
-normal = Vector2(-0.0046728463, 0.9999891)
-distance = -204.92766
-
-[sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_jgkqa"]
-distance = -206.0
-
-[sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_gi3cn"]
-normal = Vector2(1, 0)
-distance = -368.77307
-
-[sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_ur7tp"]
-normal = Vector2(-1, 0)
-distance = -21.0
-
-[node name="Node2D" type="Node2D" unique_id=383687904]
-
-[node name="20MineThemed2dRpgPixelArtHintergründe(digitalArt)" type="Sprite2D" parent="." unique_id=729489220]
-position = Vector2(0, 1)
-texture = ExtResource("1_e3fax")
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1612293927]
-shape = SubResource("WorldBoundaryShape2D_1hysq")
-
-[node name="CollisionShape2D2" type="CollisionShape2D" parent="." unique_id=1714015047]
-shape = SubResource("WorldBoundaryShape2D_jgkqa")
-
-[node name="CollisionShape2D3" type="CollisionShape2D" parent="." unique_id=351136175]
-shape = SubResource("WorldBoundaryShape2D_gi3cn")
-
-[node name="CollisionShape2D4" type="CollisionShape2D" parent="." unique_id=839635465]
-position = Vector2(348, -13)
-shape = SubResource("WorldBoundaryShape2D_ur7tp")
+[node name="Node2D" unique_id=383687904 instance=ExtResource("1_e3fax")]
