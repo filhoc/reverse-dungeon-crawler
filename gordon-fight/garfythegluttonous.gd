@@ -63,7 +63,9 @@ func _physics_process(delta: float) -> void:
 		$firebreath/fire.play("default")
 		$firebreath/fire_hitbox.disabled = false
 		
-		get_tree().create_timer(0.6).timeout.connect(func(): is_attacking = false)
+		get_tree().create_timer(0.6).timeout.connect(disable_fire)
+		
+
 
 
 	var direction := Input.get_axis("left", "right")
@@ -106,3 +108,7 @@ func _physics_process(delta: float) -> void:
 			landing_pause = false
 			is_attacking = false
 		)
+
+func disable_fire():
+		$firebreath/fire_hitbox.set_deferred("disabled", true)
+		is_attacking = false	
