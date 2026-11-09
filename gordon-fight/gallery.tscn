@@ -1,0 +1,11 @@
+[gd_scene format=3 uid="uid://bbi3lvkyhlj4m"]
+
+[ext_resource type="PackedScene" uid="uid://b48tsos3g1iwj" path="res://sceen/gallery.tscn" id="1_0uoo4"]
+[ext_resource type="Texture2D" uid="uid://dgtmyc12eynsf" path="res://sceen/Instruction sheet Gordon fight.png" id="2_31do6"]
+
+[node name="gallery" unique_id=743700449 instance=ExtResource("1_0uoo4")]
+
+[node name="InstructionSheetGordonFight" type="Sprite2D" parent="." index="0" unique_id=1652093124]
+position = Vector2(575, 328.12503)
+scale = Vector2(0.569, 0.45608822)
+texture = ExtResource("2_31do6")
