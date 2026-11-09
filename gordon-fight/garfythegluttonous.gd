@@ -6,11 +6,13 @@ extends CharacterBody2D
 @onready var flop_hitbox: CollisionShape2D = $bellyflop/flop_hitbox
 @onready var garfy_healthbar: ProgressBar = $garfy_healthbar
 
-
+var belly_flopping = false
+const FLOP_SPEED = 700.0
 var jumping
+var landing_pause = false
 
 const SPEED = 300.0
-const JUMP_VELOCITY = -400.0
+const JUMP_VELOCITY = -700.0
 
 var is_attacking: bool = false
 
@@ -21,6 +23,9 @@ var health = 150
 func _ready() -> void:
 	garfy_healthbar.max_value = max_health
 	garfy_healthbar.value = health
+	
+	fire_hitbox.disabled = true
+	flop_hitbox.disabled = true
 
 
 func take_damage(damage: int) -> void:
@@ -34,20 +39,23 @@ func take_damage(damage: int) -> void:
 
 
 func _physics_process(delta: float) -> void:
+
 	if not is_on_floor():
 		velocity += get_gravity() * delta
 
-	if Input.is_action_just_pressed("jump") and is_on_floor():
+	if Input.is_action_just_pressed("jump") and is_on_floor() and not landing_pause:
 		velocity.y = JUMP_VELOCITY
 		jumping = true
-		get_tree().create_timer(0.6).timeout.connect(func(): jumping = false)
 
 	if Input.is_action_just_pressed("primary_attack") and not is_attacking and jumping:
 		is_attacking = true
+		belly_flopping = true
+
 		$AnimatedSprite2D.play("belly_flop (primary)")
-		$bellyflop/flop_hitbox.disabled = false
+		velocity.y = FLOP_SPEED
+
+		flop_hitbox.set_deferred("disabled", false)
 		
-		get_tree().create_timer(0.7).timeout.connect(func(): is_attacking = false)
 		
 	if Input.is_action_just_pressed("secondary_attack") and not is_attacking:
 		is_attacking = true
@@ -77,11 +85,24 @@ func _physics_process(delta: float) -> void:
 	else:
 		velocity.x = move_toward(velocity.x, 0, SPEED)
 
-	if not is_attacking:
+	if not is_attacking and not landing_pause:
 		if direction != 0:
 			$AnimatedSprite2D.play("roll")
 		else:
 			$AnimatedSprite2D.play("idle")
 
-		move_and_slide()
-			
+	move_and_slide()
+
+	if belly_flopping and is_on_floor():
+		flop_hitbox.set_deferred("disabled", true)
+
+		belly_flopping = false
+		jumping = false
+		landing_pause = true
+
+		$AnimatedSprite2D.play("belly_flop (primary)")
+
+		get_tree().create_timer(0.3).timeout.connect(func():
+			landing_pause = false
+			is_attacking = false
+		)

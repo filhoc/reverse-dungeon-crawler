@@ -130,9 +130,9 @@ animations = [{
 "duration": 1.0,
 "texture": SubResource("AtlasTexture_3d0ai")
 }],
-"loop": 1,
+"loop": 0,
 "name": &"belly_flop (primary)",
-"speed": 7.0
+"speed": 10.0
 }, {
 "frames": [{
 "duration": 1.0,
@@ -300,13 +300,13 @@ animations = [{
 "duration": 1.0,
 "texture": SubResource("AtlasTexture_t6xsb")
 }],
-"loop": 1,
+"loop": 0,
 "name": &"default",
 "speed": 10.0
 }]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_xrivr"]
-radius = 157.25775
+radius = 219.91135
 
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_l1oi8"]
 
@@ -314,6 +314,7 @@ radius = 157.25775
 bg_color = Color(0.77866334, 0.0717848, 7.6046585e-06, 1)
 
 [node name="garfythegluttonous" type="CharacterBody2D" unique_id=1607562039 groups=["player"]]
+collision_layer = 2
 script = ExtResource("1_l1oi8")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=273871328]
@@ -325,20 +326,22 @@ shape = SubResource("CapsuleShape2D_l1oi8")
 position = Vector2(92, -73)
 scale = Vector2(5, 5)
 sprite_frames = SubResource("SpriteFrames_13qdw")
-animation = &"roll"
-frame_progress = 0.3470564
+animation = &"belly_flop (primary)"
+frame = 5
+frame_progress = 1.0
 
 [node name="Camera2D" type="Camera2D" parent="." unique_id=298700371]
 
 [node name="firebreath" type="Area2D" parent="." unique_id=231818736]
-collision_layer = 4
+collision_layer = 6
 script = ExtResource("2_7t42u")
 
 [node name="fire" type="AnimatedSprite2D" parent="firebreath" unique_id=1730197682]
 position = Vector2(-252, -91.00001)
 scale = Vector2(9, 6)
 sprite_frames = SubResource("SpriteFrames_xrivr")
-frame_progress = 0.23896837
+frame = 14
+frame_progress = 1.0
 
 [node name="fire_hitbox" type="CollisionPolygon2D" parent="firebreath" unique_id=136904028 groups=["player"]]
 position = Vector2(-246.99998, 20.000002)
@@ -347,6 +350,7 @@ polygon = PackedVector2Array(10, 0, 2.8151436, 4.1348305, -10, 10, -11.751578, 1
 disabled = true
 
 [node name="bellyflop" type="Area2D" parent="." unique_id=1815953752]
+collision_layer = 6
 
 [node name="flop_hitbox" type="CollisionShape2D" parent="bellyflop" unique_id=1050035734]
 position = Vector2(114, -25)
