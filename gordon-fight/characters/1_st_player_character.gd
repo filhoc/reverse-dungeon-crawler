@@ -50,6 +50,7 @@ func _physics_process(delta: float) -> void:
 			$weapon/weapon_hitbox.position.x = 24
 		elif direction < 0:
 			$AnimatedSprite2D.flip_h = false
+			$weapon/weapon_hitbox.position.x = -24
 	else:
 		velocity.x = move_toward(velocity.x, 0, SPEED)
 

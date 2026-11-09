@@ -175,7 +175,7 @@ distance = -115.0
 script = ExtResource("4_pause")
 
 [node name="warrior" parent="." unique_id=1051920417 instance=ExtResource("1_hn12h")]
-position = Vector2(-51, 7)
+position = Vector2(-120, 8)
 
 [node name="TileMap" type="TileMap" parent="." unique_id=555122774]
 format = 2
@@ -190,4 +190,4 @@ tile_set = SubResource("TileSet_1hysq")
 shape = SubResource("WorldBoundaryShape2D_1hysq")
 
 [node name="1st player character" parent="." unique_id=757792488 instance=ExtResource("3_rka8t")]
-position = Vector2(61, 13)
+position = Vector2(56, -1)

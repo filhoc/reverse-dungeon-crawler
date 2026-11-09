@@ -6,16 +6,18 @@ extends Node2D
 @export var speed: float = 80.0
 
 var player: CharacterBody2D
+var target: Marker2D
 
 @onready var animated_sprite_2d: AnimatedSprite2D = $AnimatedSprite2D
 
 
 func _ready() -> void:
 	player = get_tree().get_first_node_in_group("player")
-
+	target = player.getnode("enemy_target")
+	
 func _process(delta: float) -> void:
 	if player:
-		var direction = sign(player.global_position.x - global_position.x)
+		var direction = sign(target.global_position.x - global_position.x)
 
 		global_position.x += direction * speed * delta
 
