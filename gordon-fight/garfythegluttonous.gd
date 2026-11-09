@@ -7,7 +7,7 @@ extends CharacterBody2D
 @onready var garfy_healthbar: ProgressBar = $garfy_healthbar
 
 
-
+var jumping
 
 const SPEED = 300.0
 const JUMP_VELOCITY = -400.0
@@ -39,6 +39,8 @@ func _physics_process(delta: float) -> void:
 
 	if Input.is_action_just_pressed("jump") and is_on_floor():
 		velocity.y = JUMP_VELOCITY
+		jumping = true
+		get_tree().create_timer(0.3).timeout.connect(func(): jumping = false)
 
 	if Input.is_action_just_pressed("primary_attack") and not is_attacking:
 		is_attacking = true
@@ -49,7 +51,7 @@ func _physics_process(delta: float) -> void:
 		
 		get_tree().create_timer(0.6).timeout.connect(func(): is_attacking = false)
 		
-	if Input.is_action_just_pressed("secondary_attack") and not is_attacking:
+	if Input.is_action_just_pressed("secondary_attack") and not is_attacking and jumping:
 		is_attacking = true
 		$AnimatedSprite2D.play("belly_flop")
 		$bellyflop/flop_hitbox.disabled = false
@@ -62,10 +64,11 @@ func _physics_process(delta: float) -> void:
 	if direction:
 		velocity.x = direction * SPEED
 		if direction > 0:
-			$AnimatedSprite2D.flip_h = true
-			$weapon/weapon_hitbox.position.x = 24
-		elif direction < 0:
 			$AnimatedSprite2D.flip_h = false
+			$firebreath/fire_hitbox.position.x = 490
+			$firebreath/fire.flip_h = true
+		elif direction < 0:
+			$AnimatedSprite2D.flip_h = true
 	else:
 		velocity.x = move_toward(velocity.x, 0, SPEED)
 
