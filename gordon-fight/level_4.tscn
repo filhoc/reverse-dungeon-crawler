@@ -24,6 +24,7 @@ position = Vector2(596, 649)
 shape = SubResource("WorldBoundaryShape2D_xrivr")
 
 [node name="right_boundary" type="StaticBody2D" parent="." unique_id=1768608034]
+position = Vector2(592, 0)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="right_boundary" unique_id=830763448]
 position = Vector2(1152, 329)
@@ -32,7 +33,7 @@ shape = SubResource("WorldBoundaryShape2D_13qdw")
 [node name="left_boundary" type="StaticBody2D" parent="." unique_id=2052888714]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="left_boundary" unique_id=1586352592]
-position = Vector2(0, 329)
+position = Vector2(-531, 328)
 shape = SubResource("WorldBoundaryShape2D_b1lj4")
 
 [node name="top_boundary" type="StaticBody2D" parent="." unique_id=1060426097]
@@ -42,7 +43,7 @@ position = Vector2(596, -3)
 shape = SubResource("WorldBoundaryShape2D_48hld")
 
 [node name="garfythegluttonous" parent="." unique_id=1607562039 instance=ExtResource("1_na6m6")]
-position = Vector2(854, 598)
+position = Vector2(644, 562)
 
 [node name="warrior" parent="." unique_id=1051920417 instance=ExtResource("2_xcfcc")]
 position = Vector2(90, 625)
