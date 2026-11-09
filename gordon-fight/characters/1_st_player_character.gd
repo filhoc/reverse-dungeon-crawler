@@ -9,8 +9,8 @@ const JUMP_VELOCITY = -400.0
 
 var is_attacking: bool = false
 
-var max_health = 30
-var health = 30
+var max_health = 50
+var health = 50
 
 
 func _ready() -> void:

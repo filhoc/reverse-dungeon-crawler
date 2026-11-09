@@ -4,7 +4,9 @@
 [ext_resource type="PackedScene" uid="uid://bomxdm42vmles" path="res://map1.tscn" id="2_rka8t"]
 [ext_resource type="PackedScene" uid="uid://bg4spvg5x8jur" path="res://1_st_player_character.tscn" id="3_rka8t"]
 [ext_resource type="Script" uid="uid://bhbxsqoh4c01h" path="res://level_1.gd" id="4_pause"]
+[ext_resource type="Script" uid="uid://dj222jg6c8tq3" path="res://user_interface.gd" id="5_5hph3"]
 [ext_resource type="Script" uid="uid://c88qwtbhgm76x" path="res://warrior_spawner.gd" id="5_rka8t"]
+[ext_resource type="Script" uid="uid://csiwgqmur0xng" path="res://score_label.gd" id="6_j7kpp"]
 
 [sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_jgkqa"]
 normal = Vector2(0.9995902, 0.028624296)
@@ -39,11 +41,11 @@ shape = SubResource("WorldBoundaryShape2D_ur7tp")
 [node name="warrior" parent="." unique_id=1051920417 instance=ExtResource("1_hn12h")]
 position = Vector2(-118, 83)
 
-[node name="StaticBody2D" type="StaticBody2D" parent="." unique_id=1372477170]
+[node name="Bottom" type="StaticBody2D" parent="." unique_id=1372477170]
 collision_layer = 16
 collision_mask = 0
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D" unique_id=1364813283]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Bottom" unique_id=1364813283]
 shape = SubResource("WorldBoundaryShape2D_1hysq")
 
 [node name="1st player character" parent="." unique_id=757792488 instance=ExtResource("3_rka8t")]
@@ -57,19 +59,35 @@ warrior_scene = ExtResource("1_hn12h")
 [node name="SpawnPoints" type="Node2D" parent="warrior_spawner" unique_id=1758287963]
 
 [node name="spawnpoint1" type="Marker2D" parent="warrior_spawner/SpawnPoints" unique_id=1890230636]
-position = Vector2(-395, 106)
+position = Vector2(-392, 103)
 
 [node name="spawnpoint2" type="Marker2D" parent="warrior_spawner/SpawnPoints" unique_id=332671617]
-position = Vector2(90, 96)
+position = Vector2(168, 98)
 
 [node name="spawnpoint3" type="Marker2D" parent="warrior_spawner/SpawnPoints" unique_id=66064537]
-position = Vector2(316, 96)
+position = Vector2(462, 96)
 
 [node name="spawnpoint4" type="Marker2D" parent="warrior_spawner/SpawnPoints" unique_id=1926207402]
 position = Vector2(-290, 85)
 
 [node name="spawnpoin5" type="Marker2D" parent="warrior_spawner/SpawnPoints" unique_id=1526739819]
-position = Vector2(-202, 75)
+position = Vector2(-527, 95)
 
 [node name="spawnpoint6" type="Marker2D" parent="warrior_spawner/SpawnPoints" unique_id=435940562]
-position = Vector2(453, 79)
+position = Vector2(1001, 90)
+
+[node name="spawnpoint7" type="Marker2D" parent="warrior_spawner/SpawnPoints" unique_id=206014649]
+position = Vector2(-960, 104)
+
+[node name="user_interface" type="Control" parent="." unique_id=1068916477]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+script = ExtResource("5_5hph3")
+
+[node name="score_label" type="Label" parent="user_interface" unique_id=1790583834]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 23.0
+script = ExtResource("6_j7kpp")

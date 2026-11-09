@@ -34,7 +34,7 @@ func spawn_warrior() -> void:
 func _on_warrior_defeated() -> void:
 	print("spawner detected warrior death")
 
-	GameManager.add_score(1)
+	
 	active_warriors -= 1
 
 	spawn_warrior()

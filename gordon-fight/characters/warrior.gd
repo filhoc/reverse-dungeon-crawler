@@ -37,6 +37,8 @@ func _process(delta: float) -> void:
 signal defeated
 
 func _on_hurtbox_area_entered(area: Area2D) -> void:
+	GameManager.score += 1
 	print("warrior killed")
 	defeated.emit()
+	
 	queue_free()
