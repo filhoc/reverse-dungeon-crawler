@@ -5,6 +5,8 @@ extends Node2D
 
 @export var speed: float = 80.0
 
+
+
 var player: CharacterBody2D
 var target: Marker2D
 
@@ -32,6 +34,9 @@ func _process(delta: float) -> void:
 			$AnimatedSprite2D.flip_h = false
 			animated_sprite_2d.play("run") 
 			
+signal defeated
 
 func _on_hurtbox_area_entered(area: Area2D) -> void:
+	print("warrior killed")
+	defeated.emit()
 	queue_free()

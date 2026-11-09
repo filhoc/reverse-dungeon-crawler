@@ -38,9 +38,14 @@ func _physics_process(delta: float) -> void:
 	if Input.is_action_just_pressed("primary_attack") and not is_attacking:
 		is_attacking = true
 		$AnimatedSprite2D.play("attack")
-		$weapon/weapon_hitbox.disabled = false
-		get_tree().create_timer(0.5).timeout.connect(func(): is_attacking = false)
+		$weapon/weapon_hitbox.set_deferred("disabled", false)
 
+		get_tree().create_timer(0.3).timeout.connect(func():
+			$weapon/weapon_hitbox.set_deferred("disabled", true)
+			is_attacking = false
+		)
+		
+		
 	var direction := Input.get_axis("left", "right")
 
 	if direction:

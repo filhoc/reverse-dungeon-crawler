@@ -219,7 +219,7 @@ height = 42.0
 bg_color = Color(0.76, 0.1502267, 0.12920001, 1)
 
 [node name="1st player character" type="CharacterBody2D" unique_id=757792488 groups=["player"]]
-collision_layer = 2
+collision_mask = 4
 script = ExtResource("1_hxqmh")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=1499632988]
@@ -234,7 +234,8 @@ zoom = Vector2(2, 2)
 position_smoothing_enabled = true
 
 [node name="weapon" type="Area2D" parent="." unique_id=1636523552]
-collision_layer = 4
+collision_layer = 2
+collision_mask = 8
 
 [node name="weapon_hitbox" type="CollisionShape2D" parent="weapon" unique_id=342821513]
 position = Vector2(-24, 2)
