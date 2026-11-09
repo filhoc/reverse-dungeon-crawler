@@ -1,6 +1,5 @@
-[gd_scene format=3 uid="uid://b8ftvpgonm6yv"]
+[gd_scene format=3 uid="uid://ca2n0wjd0qqiq"]
 
-[ext_resource type="Script" path="res://gorrila.gd" id="1_nuegi"]
 [ext_resource type="Texture2D" uid="uid://dwcf7k8061ird" path="res://assets/sprites/gorilla/sprite sheet (1).png" id="2_w4rgy"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_0f5da"]
@@ -129,7 +128,6 @@ radius = 17.0
 height = 56.0
 
 [node name="gorrila" type="CharacterBody2D" unique_id=17873438]
-script = ExtResource("1_nuegi")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=2115374684]
 position = Vector2(0, 4)
