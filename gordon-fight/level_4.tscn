@@ -2,6 +2,9 @@
 
 [ext_resource type="PackedScene" uid="uid://cvc8c4wfh0uev" path="res://garfythegluttonous.tscn" id="1_na6m6"]
 [ext_resource type="PackedScene" uid="uid://w8e6pocxnkb1" path="res://warrior.tscn" id="2_xcfcc"]
+[ext_resource type="Script" uid="uid://c88qwtbhgm76x" path="res://warrior_spawner.gd" id="3_xcfcc"]
+[ext_resource type="Script" uid="uid://dj222jg6c8tq3" path="res://user_interface.gd" id="4_l45re"]
+[ext_resource type="Script" uid="uid://csiwgqmur0xng" path="res://score_label.gd" id="5_c8stx"]
 
 [sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_xrivr"]
 normal = Vector2(-0.01639124, -0.99986565)
@@ -11,6 +14,7 @@ normal = Vector2(-1, 0)
 
 [sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_b1lj4"]
 normal = Vector2(1, 0)
+distance = -277.0
 
 [sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_48hld"]
 normal = Vector2(-0.019227214, 0.99981517)
@@ -24,7 +28,7 @@ position = Vector2(596, 649)
 shape = SubResource("WorldBoundaryShape2D_xrivr")
 
 [node name="right_boundary" type="StaticBody2D" parent="." unique_id=1768608034]
-position = Vector2(592, 0)
+position = Vector2(1402, -45)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="right_boundary" unique_id=830763448]
 position = Vector2(1152, 329)
@@ -33,17 +37,63 @@ shape = SubResource("WorldBoundaryShape2D_13qdw")
 [node name="left_boundary" type="StaticBody2D" parent="." unique_id=2052888714]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="left_boundary" unique_id=1586352592]
-position = Vector2(-531, 328)
+position = Vector2(-398, 626)
 shape = SubResource("WorldBoundaryShape2D_b1lj4")
 
 [node name="top_boundary" type="StaticBody2D" parent="." unique_id=1060426097]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="top_boundary" unique_id=498604182]
-position = Vector2(596, -3)
+position = Vector2(579, -287)
 shape = SubResource("WorldBoundaryShape2D_48hld")
 
 [node name="garfythegluttonous" parent="." unique_id=1607562039 instance=ExtResource("1_na6m6")]
-position = Vector2(644, 562)
+position = Vector2(702, 548)
 
 [node name="warrior" parent="." unique_id=1051920417 instance=ExtResource("2_xcfcc")]
 position = Vector2(90, 625)
+
+[node name="warrior_spawner" type="Node2D" parent="." unique_id=332574937]
+script = ExtResource("3_xcfcc")
+warrior_scene = ExtResource("2_xcfcc")
+
+[node name="SpawnPoints" type="Node2D" parent="warrior_spawner" unique_id=1480866646]
+
+[node name="spawnpoint1" type="Marker2D" parent="warrior_spawner/SpawnPoints" unique_id=1263629906]
+position = Vector2(-850, 617)
+
+[node name="spawnpoint2" type="Marker2D" parent="warrior_spawner/SpawnPoints" unique_id=1733065767]
+position = Vector2(-464, 645)
+
+[node name="spawnpoint3" type="Marker2D" parent="warrior_spawner/SpawnPoints" unique_id=2022449639]
+position = Vector2(1392, 608)
+
+[node name="spawnpoint4" type="Marker2D" parent="warrior_spawner/SpawnPoints" unique_id=1831175760]
+position = Vector2(1890, 611)
+
+[node name="spawnpoin5" type="Marker2D" parent="warrior_spawner/SpawnPoints" unique_id=665815818]
+position = Vector2(-218, 634)
+
+[node name="spawnpoint6" type="Marker2D" parent="warrior_spawner/SpawnPoints" unique_id=85127853]
+position = Vector2(1602, 598)
+
+[node name="spawnpoint7" type="Marker2D" parent="warrior_spawner/SpawnPoints" unique_id=966151308]
+position = Vector2(270, 602)
+
+[node name="user_interface" type="Control" parent="." unique_id=1043619210]
+layout_mode = 3
+anchors_preset = 0
+offset_left = 510.0
+offset_top = 346.0
+offset_right = 550.0
+offset_bottom = 386.0
+script = ExtResource("4_l45re")
+
+[node name="score_label" type="Label" parent="user_interface" unique_id=1206268186]
+layout_mode = 1
+anchors_preset = -1
+anchor_right = 0.5
+offset_left = -187.0
+offset_top = -46.0
+offset_right = 146.0
+offset_bottom = 105.0
+script = ExtResource("5_c8stx")
