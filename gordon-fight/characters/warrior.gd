@@ -13,7 +13,7 @@ var target: Marker2D
 
 func _ready() -> void:
 	player = get_tree().get_first_node_in_group("player")
-	target = player.getnode("enemy_target")
+	target = player.get_node("enemy_target")
 	
 func _process(delta: float) -> void:
 	if player:

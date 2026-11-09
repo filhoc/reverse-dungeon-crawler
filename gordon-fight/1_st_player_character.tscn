@@ -225,7 +225,6 @@ script = ExtResource("1_hxqmh")
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=1499632988]
 sprite_frames = SubResource("SpriteFrames_xrivr")
 animation = &"attack"
-frame = 7
 
 [node name="body_hitbox" type="CollisionShape2D" parent="." unique_id=578331050]
 shape = SubResource("CapsuleShape2D_xrivr")
@@ -251,3 +250,5 @@ theme_override_styles/background = SubResource("StyleBoxEmpty_hxqmh")
 theme_override_styles/fill = SubResource("StyleBoxFlat_xrivr")
 max_value = 50.0
 show_percentage = false
+
+[node name="enemy_target" type="Marker2D" parent="." unique_id=961323863]
