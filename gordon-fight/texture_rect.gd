@@ -11,6 +11,8 @@ const CREDITS_SCENE_PATH := "res://sceen/credits.tscn"
 
 
 func _ready() -> void:
+	GameManager.start_music()
+
 	# The button artwork and labels are baked into the menu background texture.
 	# Keep the controls transparent so they act as clickable hotspots over it.
 	for button in [play_button, gallery_button, credits_button, exit_button]:
