@@ -2,6 +2,8 @@
 
 [ext_resource type="Texture2D" uid="uid://ccj28vh2jreih" path="res://assets/sprites/angel_aye spritesheet.png" id="1_5edgu"]
 [ext_resource type="Script" uid="uid://bh37j0yf4ombb" path="res://angel eye.gd" id="2_gitgs"]
+[ext_resource type="Script" uid="uid://bef4bplsbx8l0" path="res://characters/weapon.gd" id="3_6c61u"]
+[ext_resource type="PackedScene" path="res://health_bar.tscn" id="4_mywbw"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_uqhkf"]
 atlas = ExtResource("1_5edgu")
@@ -113,7 +115,7 @@ animations = [{
 "duration": 1.0,
 "texture": SubResource("AtlasTexture_i4vw5")
 }],
-"loop": 1,
+"loop": 0,
 "name": &"main",
 "speed": 5.0
 }, {
@@ -142,12 +144,16 @@ animations = [{
 radius = 23.0
 height = 92.0
 
-[node name="CharacterBody2D" type="CharacterBody2D" unique_id=614585757]
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_y5vhr"]
+radius = 20.336956
+height = 111.67936
+
+[node name="CharacterBody2D" type="CharacterBody2D" unique_id=614585757 groups=["player"]]
+script = ExtResource("2_gitgs")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=1581886480]
 sprite_frames = SubResource("SpriteFrames_jgkqa")
 animation = &"right"
-script = ExtResource("2_gitgs")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=529442647]
 position = Vector2(1, 5)
@@ -155,3 +161,21 @@ shape = SubResource("CapsuleShape2D_1hysq")
 
 [node name="Camera2D" type="Camera2D" parent="." unique_id=563024121]
 position = Vector2(0, 18)
+
+[node name="weapon" type="Area2D" parent="." unique_id=1359761542]
+position = Vector2(20, -1)
+collision_layer = 2
+script = ExtResource("3_6c61u")
+
+[node name="weapon_hitbox" type="CollisionShape2D" parent="weapon" unique_id=1452440070]
+position = Vector2(-18.000002, 3)
+scale = Vector2(1.6226612, 1.6296656)
+shape = SubResource("CapsuleShape2D_y5vhr")
+disabled = true
+
+[node name="beman_healthbar" parent="." unique_id=1262796606 instance=ExtResource("4_mywbw")]
+z_index = 10
+offset_left = -27.0
+offset_top = -80.0
+offset_right = 33.0
+offset_bottom = -53.0

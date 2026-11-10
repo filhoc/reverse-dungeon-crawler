@@ -1,44 +1,119 @@
 [gd_scene format=3 uid="uid://da0uu5xpb5g1v"]
 
-[ext_resource type="PackedScene" uid="uid://bhrlnts88qbwd" path="res://garfythegluttonous.tscn" id="2_xcfcc"]
-
-[sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_xrivr"]
-normal = Vector2(-0.01639124, -0.99986565)
-
-[sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_13qdw"]
-normal = Vector2(-1, 0)
-
-[sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_b1lj4"]
-normal = Vector2(1, 0)
+[ext_resource type="Texture2D" uid="uid://c5w8iran43p4p" path="res://sceen/dungeon-stone-archway-ivy-glowing-260nw-2707348259.webp" id="1_bbb7w"]
+[ext_resource type="PackedScene" uid="uid://bhrlnts88qbwd" path="res://maps/garfythegluttonous.tscn" id="2_xcfcc"]
+[ext_resource type="Script" uid="uid://csiwgqmur0xng" path="res://score_label.gd" id="3_ww8ti"]
+[ext_resource type="Script" uid="uid://c88qwtbhgm76x" path="res://warrior_spawner.gd" id="4_dlk4n"]
+[ext_resource type="PackedScene" uid="uid://w8e6pocxnkb1" path="res://warrior.tscn" id="5_17ord"]
 
 [sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_48hld"]
 normal = Vector2(-0.019227214, 0.99981517)
 
+[sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_b1lj4"]
+normal = Vector2(-0.9991539, 0.041127402)
+distance = -360.92722
+
+[sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_xrivr"]
+normal = Vector2(-0.01639124, -0.99986565)
+distance = -202.87817
+
+[sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_13qdw"]
+normal = Vector2(-1, 0)
+distance = -695.0
+
 [node name="level 4" type="Node2D" unique_id=2037761842]
 
-[node name="bottom_boundary" type="StaticBody2D" parent="." unique_id=378783869]
+[node name="DungeonStoneArchwayIvyGlowing260Nw2707348259" type="Sprite2D" parent="." unique_id=1313310784]
+position = Vector2(810, 285)
+scale = Vector2(6.7875557, 3.6136222)
+texture = ExtResource("1_bbb7w")
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="bottom_boundary" unique_id=653834812]
+[node name="top_boundary" type="StaticBody2D" parent="DungeonStoneArchwayIvyGlowing260Nw2707348259" unique_id=1060426097]
+position = Vector2(-120.58865, -38.373142)
+scale = Vector2(0.17785935, 0.15288104)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="DungeonStoneArchwayIvyGlowing260Nw2707348259/top_boundary" unique_id=498604182]
+position = Vector2(607, -420)
+shape = SubResource("WorldBoundaryShape2D_48hld")
+
+[node name="left_boundary" type="StaticBody2D" parent="DungeonStoneArchwayIvyGlowing260Nw2707348259" unique_id=2052888714]
+position = Vector2(-120.05506, -38.37314)
+scale = Vector2(0.17785935, 0.15288104)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="DungeonStoneArchwayIvyGlowing260Nw2707348259/left_boundary" unique_id=1586352592]
+position = Vector2(-314.26123, 328.21622)
+shape = SubResource("WorldBoundaryShape2D_b1lj4")
+
+[node name="bottom_boundary" type="StaticBody2D" parent="DungeonStoneArchwayIvyGlowing260Nw2707348259" unique_id=378783869]
+position = Vector2(-120.05506, -38.37314)
+scale = Vector2(0.17785935, 0.15288104)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="DungeonStoneArchwayIvyGlowing260Nw2707348259/bottom_boundary" unique_id=653834812]
 position = Vector2(596, 649)
 shape = SubResource("WorldBoundaryShape2D_xrivr")
 
-[node name="right_boundary" type="StaticBody2D" parent="." unique_id=1768608034]
+[node name="right_boundary" type="StaticBody2D" parent="DungeonStoneArchwayIvyGlowing260Nw2707348259" unique_id=1768608034]
+position = Vector2(-120.05506, -38.37314)
+scale = Vector2(0.17785935, 0.15288104)
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="right_boundary" unique_id=830763448]
-position = Vector2(1152, 329)
+[node name="CollisionShape2D" type="CollisionShape2D" parent="DungeonStoneArchwayIvyGlowing260Nw2707348259/right_boundary" unique_id=830763448]
+position = Vector2(1096.3778, 345.37534)
 shape = SubResource("WorldBoundaryShape2D_13qdw")
 
-[node name="left_boundary" type="StaticBody2D" parent="." unique_id=2052888714]
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="left_boundary" unique_id=1586352592]
-position = Vector2(0, 329)
-shape = SubResource("WorldBoundaryShape2D_b1lj4")
-
-[node name="top_boundary" type="StaticBody2D" parent="." unique_id=1060426097]
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="top_boundary" unique_id=498604182]
-position = Vector2(596, -3)
-shape = SubResource("WorldBoundaryShape2D_48hld")
-
 [node name="garfythegluttonous" parent="." unique_id=1607562039 instance=ExtResource("2_xcfcc")]
-position = Vector2(911, 583)
+position = Vector2(577, 363)
+
+[node name="GameUI" type="CanvasLayer" parent="." unique_id=1769728750]
+layer = 10
+
+[node name="score_label" type="Label" parent="GameUI" unique_id=587799451]
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -36.0
+offset_top = 247.0
+offset_right = 168.0
+offset_bottom = 283.0
+grow_horizontal = 2
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 4
+theme_override_font_sizes/font_size = 24
+text = "Score: 0"
+script = ExtResource("3_ww8ti")
+
+[node name="warrior_spawner" type="Node2D" parent="." unique_id=1909672842]
+position = Vector2(1260, 607)
+scale = Vector2(0.99427587, 0.18796055)
+script = ExtResource("4_dlk4n")
+warrior_scene = ExtResource("5_17ord")
+
+[node name="SpawnPoints" type="Node2D" parent="warrior_spawner" unique_id=759805726]
+position = Vector2(-524, -378)
+
+[node name="spawnpoint1" type="Marker2D" parent="warrior_spawner/SpawnPoints" unique_id=217560528]
+position = Vector2(-392, 103)
+
+[node name="spawnpoint2" type="Marker2D" parent="warrior_spawner/SpawnPoints" unique_id=102107073]
+position = Vector2(168, 98)
+
+[node name="spawnpoint3" type="Marker2D" parent="warrior_spawner/SpawnPoints" unique_id=998578167]
+position = Vector2(462, 96)
+
+[node name="spawnpoint4" type="Marker2D" parent="warrior_spawner/SpawnPoints" unique_id=1874269600]
+position = Vector2(-290, 85)
+
+[node name="spawnpoin5" type="Marker2D" parent="warrior_spawner/SpawnPoints" unique_id=1604110535]
+position = Vector2(-527, 95)
+
+[node name="spawnpoint6" type="Marker2D" parent="warrior_spawner/SpawnPoints" unique_id=445554717]
+position = Vector2(1001, 90)
+
+[node name="spawnpoint7" type="Marker2D" parent="warrior_spawner/SpawnPoints" unique_id=2011853243]
+position = Vector2(-960, 104)
+
+[node name="DungeonStoneArchwayIvyGlowing260Nw2707348260" type="Sprite2D" parent="." unique_id=1330014214]
+position = Vector2(798.99994, 1314)
+scale = Vector2(6.887726, 4.8702316)
+texture = ExtResource("1_bbb7w")
+

@@ -1,7 +1,9 @@
 [gd_scene format=3 uid="uid://ca2n0wjd0qqiq"]
 
-[ext_resource type="Script" uid="uid://hyuvxa6xrpcb" path="res://characters/gorrila.gd" id="1_nuegi"]
+[ext_resource type="Script" uid="uid://dji8fyxho5hg5" path="res://characters/character_body_2d.gd" id="1_nuegi"]
 [ext_resource type="Texture2D" uid="uid://dwcf7k8061ird" path="res://assets/sprites/gorilla/sprite sheet (1).png" id="2_w4rgy"]
+[ext_resource type="Script" uid="uid://bef4bplsbx8l0" path="res://characters/weapon.gd" id="3_bfi4g"]
+[ext_resource type="PackedScene" path="res://health_bar.tscn" id="4_health_bar"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_0f5da"]
 atlas = ExtResource("2_w4rgy")
@@ -128,18 +130,44 @@ animations = [{
 radius = 17.0
 height = 56.0
 
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_imqau"]
+radius = 12.0
+height = 46.0
+
 [node name="gorrila" type="CharacterBody2D" unique_id=17873438]
+position = Vector2(-5, -16)
+scale = Vector2(0.7635605, 0.7972177)
 script = ExtResource("1_nuegi")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=2115374684]
-position = Vector2(0, 4)
+position = Vector2(13, -9)
+scale = Vector2(1.0005043, 0.77590626)
 sprite_frames = SubResource("SpriteFrames_jgkqa")
-animation = &"death"
+animation = &"secondary"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=153287414]
-position = Vector2(-32, -3)
+position = Vector2(6.9999995, -3)
+scale = Vector2(1.0318846, 0.8280493)
 shape = SubResource("CapsuleShape2D_02ol6")
 
 [node name="Camera2D" type="Camera2D" parent="." unique_id=877878705]
 zoom = Vector2(4, 4)
 position_smoothing_enabled = true
+
+[node name="weapon" type="Area2D" parent="." unique_id=1301022991]
+position = Vector2(20, -1)
+collision_layer = 2
+script = ExtResource("3_bfi4g")
+
+[node name="weapon_hitbox" type="CollisionShape2D" parent="weapon" unique_id=248445536]
+position = Vector2(25.000004, -3)
+scale = Vector2(1.6226612, 1.6296656)
+shape = SubResource("CapsuleShape2D_imqau")
+disabled = true
+
+[node name="beman_healthbar" parent="." unique_id=747904914 instance=ExtResource("4_health_bar")]
+z_index = 10
+offset_left = 0.0
+offset_top = -58.0
+offset_right = 60.0
+offset_bottom = -31.0

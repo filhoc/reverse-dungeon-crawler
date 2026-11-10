@@ -8,14 +8,22 @@ extends Node2D
 
 
 var player: CharacterBody2D
-var target: Marker2D
+var target: Node2D
 
 @onready var animated_sprite_2d: AnimatedSprite2D = $AnimatedSprite2D
 
 
 func _ready() -> void:
-	player = get_tree().get_first_node_in_group("player")
-	target = player.get_node("enemy_target")
+	player = get_tree().get_first_node_in_group("player") as CharacterBody2D
+	if player == null and get_tree().current_scene != null:
+		player = get_tree().current_scene.get_node_or_null("gorrila") as CharacterBody2D
+	if player == null:
+		set_process(false)
+		return
+
+	target = player.get_node_or_null("enemy_target") as Node2D
+	if target == null:
+		target = player
 	
 func _process(delta: float) -> void:
 	if player:
@@ -40,5 +48,4 @@ func _on_hurtbox_area_entered(area: Area2D) -> void:
 	GameManager.score += 1
 	print("warrior killed")
 	defeated.emit()
-	
 	queue_free()

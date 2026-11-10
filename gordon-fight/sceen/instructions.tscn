@@ -1,7 +1,7 @@
 [gd_scene format=3 uid="uid://bn8a0xictpg73"]
 
 [ext_resource type="Texture2D" uid="uid://dgtmyc12eynsf" path="res://sceen/Instruction sheet Gordon fight.png" id="1_h4r1g"]
-[ext_resource type="Script" uid="uid://cxk524akp3uni" path="res://sceen/instructions.gd" id="2_script"]
+[ext_resource type="Script" path="res://sceen/instructions.gd" id="2_script"]
 
 [node name="instructions" type="Control" unique_id=1212865658]
 layout_mode = 3
@@ -33,7 +33,7 @@ offset_right = -24.0
 offset_bottom = -24.0
 grow_horizontal = 0
 grow_vertical = 0
-mouse_default_cursor_shape = 2
 text = "Exit"
+mouse_default_cursor_shape = 2
 
 [connection signal="pressed" from="ExitButton" to="." method="_on_exit_button_pressed"]

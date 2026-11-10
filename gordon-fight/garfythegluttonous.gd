@@ -18,6 +18,7 @@ var is_attacking: bool = false
 
 var max_health = 150
 var health = 150
+var is_dead: bool = false
 
 
 func _ready() -> void:
@@ -29,13 +30,20 @@ func _ready() -> void:
 
 
 func take_damage(damage: int) -> void:
-	health -= damage
+	if is_dead:
+		return
+
+	health = max(health - damage, 0)
 	garfy_healthbar.value = health
 
 	print("you took ", damage, " damage")
 
 	if health <= 0:
-		get_tree().reload_current_scene()
+		is_dead = true
+		GameManager.final_score = GameManager.score
+		var error := get_tree().change_scene_to_file("res://lose.tscn")
+		if error != OK:
+			push_error("Could not open the Lose scene (error %d)." % error)
 
 
 func _physics_process(delta: float) -> void:

@@ -1,0 +1,57 @@
+[gd_scene format=3 uid="uid://chbgyd0g8wl1e"]
+
+[ext_resource type="Texture2D" uid="uid://cdhetda7s56am" path="res://sceen/cccccc 7.44.18 PM.png" id="1_rtc1j"]
+[ext_resource type="Script" uid="uid://crk4rsrm60slk" path="res://lose.gd" id="2_lose"]
+
+[node name="Control" type="Control" unique_id=271059537]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("2_lose")
+
+[node name="Cccccc7_44_18Pm" type="Sprite2D" parent="." unique_id=1865850784]
+position = Vector2(604, 357.00003)
+scale = Vector2(0.643159, 0.5103527)
+texture = ExtResource("1_rtc1j")
+
+[node name="FinalScoreLabel" type="Label" parent="." unique_id=1397682662]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -260.0
+offset_top = -20.0
+offset_right = 260.0
+offset_bottom = 50.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_colors/font_color = Color(0.94, 0.17, 0.03, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 4
+theme_override_font_sizes/font_size = 42
+text = "Final Score: 0"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="LoadingScreenButton" type="Button" parent="." unique_id=1397682663]
+custom_minimum_size = Vector2(420, 72)
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -210.0
+offset_top = 105.0
+offset_right = 210.0
+offset_bottom = 177.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_default_cursor_shape = 2
+theme_override_font_sizes/font_size = 24
+text = "Back to Loading Screen"

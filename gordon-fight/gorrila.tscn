@@ -1,5 +1,6 @@
 [gd_scene format=3 uid="uid://ca2n0wjd0qqiq"]
 
+[ext_resource type="Script" uid="uid://dji8fyxho5hg5" path="res://characters/character_body_2d.gd" id="1_controller"]
 [ext_resource type="Texture2D" uid="uid://dwcf7k8061ird" path="res://assets/sprites/gorilla/sprite sheet (1).png" id="2_w4rgy"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_0f5da"]
@@ -127,17 +128,49 @@ animations = [{
 radius = 17.0
 height = 56.0
 
+[sub_resource type="CapsuleShape2D" id="GorillaWeaponShape"]
+radius = 12.0
+height = 46.0
+
+[sub_resource type="StyleBoxEmpty" id="GorillaHealthBarBackground"]
+
+[sub_resource type="StyleBoxFlat" id="GorillaHealthBarFill"]
+bg_color = Color(0.76, 0.1502267, 0.12920001, 1)
+
 [node name="gorrila" type="CharacterBody2D" unique_id=17873438]
+script = ExtResource("1_controller")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=2115374684]
 position = Vector2(0, 4)
+scale = Vector2(2.041947, 1.4179968)
 sprite_frames = SubResource("SpriteFrames_jgkqa")
 animation = &"death"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=153287414]
-position = Vector2(-32, -3)
+position = Vector2(-65, -5)
+scale = Vector2(1.8451807, 1.534462)
 shape = SubResource("CapsuleShape2D_02ol6")
 
 [node name="Camera2D" type="Camera2D" parent="." unique_id=877878705]
+scale = Vector2(7.893193, -4.0622582)
 zoom = Vector2(4, 4)
 position_smoothing_enabled = true
+
+[node name="weapon" type="Area2D" parent="."]
+collision_layer = 2
+collision_mask = 8
+
+[node name="weapon_hitbox" type="CollisionShape2D" parent="weapon"]
+position = Vector2(24, 0)
+shape = SubResource("GorillaWeaponShape")
+disabled = true
+
+[node name="beman_healthbar" type="ProgressBar" parent="."]
+offset_left = -30.0
+offset_top = -39.0
+offset_right = 30.0
+offset_bottom = -26.0
+theme_override_styles/background = SubResource("GorillaHealthBarBackground")
+theme_override_styles/fill = SubResource("GorillaHealthBarFill")
+max_value = 50.0
+show_percentage = false

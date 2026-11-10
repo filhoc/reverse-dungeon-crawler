@@ -1,5 +1,100 @@
 [gd_scene format=3 uid="uid://b2dc48hc3hwip"]
 
-[ext_resource type="PackedScene" uid="uid://b2dc48hc3hwip" path="res://gorrila map.tscn" id="1_e3fax"]
+[ext_resource type="Texture2D" uid="uid://bjoos5sbr2yum" path="res://sceen/wmremove-transformed (1) 4.50.06 PM.jpeg" id="1_jn7i2"]
+[ext_resource type="Script" uid="uid://c88qwtbhgm76x" path="res://warrior_spawner.gd" id="2_1ncg2"]
+[ext_resource type="PackedScene" uid="uid://w8e6pocxnkb1" path="res://warrior.tscn" id="3_2dg1f"]
+[ext_resource type="PackedScene" uid="uid://ca2n0wjd0qqiq" path="res://characters/gorrila.tscn" id="4_hex05"]
+[ext_resource type="Script" uid="uid://dj222jg6c8tq3" path="res://user_interface.gd" id="5_2dg1f"]
+[ext_resource type="Script" uid="uid://csiwgqmur0xng" path="res://score_label.gd" id="5_score"]
 
-[node name="Node2D" unique_id=383687904 instance=ExtResource("1_e3fax")]
+[sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_gi3cn"]
+distance = -217.16919
+
+[sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_67fcn"]
+normal = Vector2(-1, 0)
+distance = -366.20816
+
+[sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_6l1ri"]
+normal = Vector2(1, 0)
+distance = -365.06195
+
+[node name="Node2D" type="Node2D" unique_id=2147467088]
+
+[node name="20MineThemed2dRpgPixelArtHintergründe(digitalArt)" type="Sprite2D" parent="." unique_id=985559363]
+position = Vector2(2.999999, -44)
+scale = Vector2(0.6564117, 0.4663022)
+texture = ExtResource("1_jn7i2")
+
+[node name="StaticBody2D" type="StaticBody2D" parent="20MineThemed2dRpgPixelArtHintergründe(digitalArt)" unique_id=1903799258]
+collision_layer = 255
+collision_mask = 255
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="20MineThemed2dRpgPixelArtHintergründe(digitalArt)/StaticBody2D" unique_id=1959790316]
+position = Vector2(1.1779395, -37.111187)
+shape = SubResource("WorldBoundaryShape2D_gi3cn")
+
+[node name="StaticBody2D2" type="StaticBody2D" parent="20MineThemed2dRpgPixelArtHintergründe(digitalArt)" unique_id=228811250]
+collision_layer = 255
+collision_mask = 255
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="20MineThemed2dRpgPixelArtHintergründe(digitalArt)/StaticBody2D2" unique_id=450418453]
+shape = SubResource("WorldBoundaryShape2D_67fcn")
+
+[node name="StaticBody2D3" type="StaticBody2D" parent="20MineThemed2dRpgPixelArtHintergründe(digitalArt)" unique_id=1604674999]
+collision_layer = 255
+collision_mask = 255
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="20MineThemed2dRpgPixelArtHintergründe(digitalArt)/StaticBody2D3" unique_id=84125849]
+shape = SubResource("WorldBoundaryShape2D_6l1ri")
+
+[node name="warrior_spawner" type="Node2D" parent="." unique_id=291405138]
+position = Vector2(117.00001, 96)
+scale = Vector2(0.25081137, 0.35966393)
+script = ExtResource("2_1ncg2")
+warrior_scene = ExtResource("3_2dg1f")
+
+[node name="SpawnPoints" type="Node2D" parent="warrior_spawner" unique_id=1844834757]
+position = Vector2(-524, -378)
+
+[node name="spawnpoint1" type="Marker2D" parent="warrior_spawner/SpawnPoints" unique_id=1742841515]
+position = Vector2(-392, 103)
+
+[node name="spawnpoint2" type="Marker2D" parent="warrior_spawner/SpawnPoints" unique_id=2122435300]
+position = Vector2(168, 98)
+
+[node name="spawnpoint3" type="Marker2D" parent="warrior_spawner/SpawnPoints" unique_id=348126517]
+position = Vector2(462, 96)
+
+[node name="spawnpoint4" type="Marker2D" parent="warrior_spawner/SpawnPoints" unique_id=1660142214]
+position = Vector2(-290, 85)
+
+[node name="spawnpoin5" type="Marker2D" parent="warrior_spawner/SpawnPoints" unique_id=414179081]
+position = Vector2(-527, 95)
+
+[node name="spawnpoint6" type="Marker2D" parent="warrior_spawner/SpawnPoints" unique_id=1300738689]
+position = Vector2(1001, 90)
+
+[node name="spawnpoint7" type="Marker2D" parent="warrior_spawner/SpawnPoints" unique_id=1265341120]
+position = Vector2(-960, 104)
+
+[node name="user_interface" type="Control" parent="." unique_id=2111319609]
+layout_mode = 3
+anchors_preset = 0
+offset_left = -20.0
+offset_top = -42.0
+offset_right = 20.0
+offset_bottom = -2.0
+script = ExtResource("5_2dg1f")
+
+[node name="score_label" type="Label" parent="user_interface" unique_id=252198803]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 23.0
+script = ExtResource("5_score")
+
+[node name="gorrila" parent="." unique_id=17873438 instance=ExtResource("4_hex05")]
+
+[node name="WmremoveTransformed(1)4_50_06Pm" type="Sprite2D" parent="." unique_id=2020237594]
+position = Vector2(36, 367)
+rotation = 3.1378996
+texture = ExtResource("1_jn7i2")

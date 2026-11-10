@@ -25,7 +25,9 @@ func take_damage(damage: int) -> void:
 	print("you took ", damage, " damage")
 
 	if health <= 0:
-		get_tree().reload_current_scene()
+		var error := get_tree().change_scene_to_file("res://gorrila map.tscn")
+		if error != OK:
+			push_error("Could not open the Gorilla map (error %d)." % error)
 
 
 func _physics_process(delta: float) -> void:

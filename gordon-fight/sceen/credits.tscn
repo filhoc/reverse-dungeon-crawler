@@ -1,3 +1,37 @@
 [gd_scene format=3 uid="uid://bwxpbbtcdl3jo"]
 
-[node name="credits" type="Node2D" unique_id=1567717892]
+[ext_resource type="Texture2D" uid="uid://iwkyy3haojxb" path="res://sceen/cccccc.png" id="1_8onxo"]
+[ext_resource type="Script" uid="uid://cgmpmd3p108xb" path="res://sceen/credits.gd" id="2_credits"]
+
+[node name="Control" type="Control" unique_id=1839625983]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("2_credits")
+
+[node name="Cccccc" type="Sprite2D" parent="." unique_id=1045098408]
+position = Vector2(582, 340)
+scale = Vector2(0.58153045, 0.49876314)
+texture = ExtResource("1_8onxo")
+
+[node name="ExitButton" type="Button" parent="." unique_id=669992436]
+custom_minimum_size = Vector2(112, 48)
+layout_mode = 1
+anchors_preset = 3
+anchor_left = 1.0
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -136.0
+offset_top = -72.0
+offset_right = -24.0
+offset_bottom = -24.0
+grow_horizontal = 0
+grow_vertical = 0
+mouse_default_cursor_shape = 2
+text = "Exit"
+
+[connection signal="pressed" from="ExitButton" to="." method="_on_exit_button_pressed"]
