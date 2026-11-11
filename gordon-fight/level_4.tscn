@@ -22,12 +22,13 @@ normal = Vector2(-0.019227214, 0.99981517)
 
 [node name="level 4" type="Node2D" unique_id=2037761842]
 
-[node name="DungeonStoneArchwayIvyGlowing260Nw2707348259" type="Sprite2D" parent="."]
+[node name="DungeonStoneArchwayIvyGlowing260Nw2707348259" type="Sprite2D" parent="." unique_id=1311883521]
 position = Vector2(675, 251)
 scale = Vector2(5.62242, 6.5410333)
 texture = ExtResource("6_level4_background")
 
 [node name="bottom_boundary" type="StaticBody2D" parent="." unique_id=378783869]
+collision_layer = 4
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="bottom_boundary" unique_id=653834812]
 position = Vector2(596, 649)
