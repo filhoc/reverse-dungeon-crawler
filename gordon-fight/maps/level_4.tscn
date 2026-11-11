@@ -60,6 +60,80 @@ scale = Vector2(0.17785935, 0.15288104)
 position = Vector2(1096.3778, 345.37534)
 shape = SubResource("WorldBoundaryShape2D_13qdw")
 
+[node name="DungeonStoneArchwayIvyGlowing260Nw2707348259" type="Sprite2D" parent="DungeonStoneArchwayIvyGlowing260Nw2707348259" unique_id=1197797619]
+position = Vector2(-1005.36914, 189.00705)
+scale = Vector2(2.5030587, 2.3593125)
+texture = ExtResource("1_bbb7w")
+
+[node name="top_boundary" type="StaticBody2D" parent="DungeonStoneArchwayIvyGlowing260Nw2707348259/DungeonStoneArchwayIvyGlowing260Nw2707348259" unique_id=597437662]
+position = Vector2(-120.58865, -38.373142)
+scale = Vector2(0.17785935, 0.15288104)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="DungeonStoneArchwayIvyGlowing260Nw2707348259/DungeonStoneArchwayIvyGlowing260Nw2707348259/top_boundary" unique_id=1115558206]
+position = Vector2(607, -420)
+shape = SubResource("WorldBoundaryShape2D_48hld")
+
+[node name="left_boundary" type="StaticBody2D" parent="DungeonStoneArchwayIvyGlowing260Nw2707348259/DungeonStoneArchwayIvyGlowing260Nw2707348259" unique_id=59579205]
+position = Vector2(-120.05506, -38.37314)
+scale = Vector2(0.17785935, 0.15288104)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="DungeonStoneArchwayIvyGlowing260Nw2707348259/DungeonStoneArchwayIvyGlowing260Nw2707348259/left_boundary" unique_id=1636699385]
+position = Vector2(-314.26123, 328.21622)
+shape = SubResource("WorldBoundaryShape2D_b1lj4")
+
+[node name="bottom_boundary" type="StaticBody2D" parent="DungeonStoneArchwayIvyGlowing260Nw2707348259/DungeonStoneArchwayIvyGlowing260Nw2707348259" unique_id=1252474680]
+position = Vector2(-120.05506, -38.37314)
+scale = Vector2(0.17785935, 0.15288104)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="DungeonStoneArchwayIvyGlowing260Nw2707348259/DungeonStoneArchwayIvyGlowing260Nw2707348259/bottom_boundary" unique_id=1942035272]
+position = Vector2(596, 649)
+shape = SubResource("WorldBoundaryShape2D_xrivr")
+
+[node name="right_boundary" type="StaticBody2D" parent="DungeonStoneArchwayIvyGlowing260Nw2707348259/DungeonStoneArchwayIvyGlowing260Nw2707348259" unique_id=224536099]
+position = Vector2(-120.05506, -38.37314)
+scale = Vector2(0.17785935, 0.15288104)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="DungeonStoneArchwayIvyGlowing260Nw2707348259/DungeonStoneArchwayIvyGlowing260Nw2707348259/right_boundary" unique_id=2060787020]
+position = Vector2(1096.3778, 345.37534)
+shape = SubResource("WorldBoundaryShape2D_13qdw")
+
+[node name="DungeonStoneArchwayIvyGlowing260Nw2707348259" type="Sprite2D" parent="DungeonStoneArchwayIvyGlowing260Nw2707348259/DungeonStoneArchwayIvyGlowing260Nw2707348259" unique_id=1125851503]
+position = Vector2(793.9538, 38.237476)
+scale = Vector2(0.956301, 1.2277898)
+texture = ExtResource("1_bbb7w")
+
+[node name="top_boundary" type="StaticBody2D" parent="DungeonStoneArchwayIvyGlowing260Nw2707348259/DungeonStoneArchwayIvyGlowing260Nw2707348259/DungeonStoneArchwayIvyGlowing260Nw2707348259" unique_id=848724877]
+position = Vector2(-120.58865, -38.373142)
+scale = Vector2(0.17785935, 0.15288104)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="DungeonStoneArchwayIvyGlowing260Nw2707348259/DungeonStoneArchwayIvyGlowing260Nw2707348259/DungeonStoneArchwayIvyGlowing260Nw2707348259/top_boundary" unique_id=2118394088]
+position = Vector2(607, -420)
+shape = SubResource("WorldBoundaryShape2D_48hld")
+
+[node name="left_boundary" type="StaticBody2D" parent="DungeonStoneArchwayIvyGlowing260Nw2707348259/DungeonStoneArchwayIvyGlowing260Nw2707348259/DungeonStoneArchwayIvyGlowing260Nw2707348259" unique_id=2036672743]
+position = Vector2(-120.05506, -38.37314)
+scale = Vector2(0.17785935, 0.15288104)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="DungeonStoneArchwayIvyGlowing260Nw2707348259/DungeonStoneArchwayIvyGlowing260Nw2707348259/DungeonStoneArchwayIvyGlowing260Nw2707348259/left_boundary" unique_id=694739826]
+position = Vector2(-314.26123, 328.21622)
+shape = SubResource("WorldBoundaryShape2D_b1lj4")
+
+[node name="bottom_boundary" type="StaticBody2D" parent="DungeonStoneArchwayIvyGlowing260Nw2707348259/DungeonStoneArchwayIvyGlowing260Nw2707348259/DungeonStoneArchwayIvyGlowing260Nw2707348259" unique_id=1020381114]
+position = Vector2(-120.05506, -38.37314)
+scale = Vector2(0.17785935, 0.15288104)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="DungeonStoneArchwayIvyGlowing260Nw2707348259/DungeonStoneArchwayIvyGlowing260Nw2707348259/DungeonStoneArchwayIvyGlowing260Nw2707348259/bottom_boundary" unique_id=2049155850]
+position = Vector2(596, 649)
+shape = SubResource("WorldBoundaryShape2D_xrivr")
+
+[node name="right_boundary" type="StaticBody2D" parent="DungeonStoneArchwayIvyGlowing260Nw2707348259/DungeonStoneArchwayIvyGlowing260Nw2707348259/DungeonStoneArchwayIvyGlowing260Nw2707348259" unique_id=1731771410]
+position = Vector2(-120.05506, -38.37314)
+scale = Vector2(0.17785935, 0.15288104)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="DungeonStoneArchwayIvyGlowing260Nw2707348259/DungeonStoneArchwayIvyGlowing260Nw2707348259/DungeonStoneArchwayIvyGlowing260Nw2707348259/right_boundary" unique_id=916709405]
+position = Vector2(1096.3778, 345.37534)
+shape = SubResource("WorldBoundaryShape2D_13qdw")
+
 [node name="garfythegluttonous" parent="." unique_id=1607562039 instance=ExtResource("2_xcfcc")]
 position = Vector2(577, 363)
 
@@ -111,3 +185,8 @@ position = Vector2(1001, 90)
 
 [node name="spawnpoint7" type="Marker2D" parent="warrior_spawner/SpawnPoints" unique_id=2011853243]
 position = Vector2(-960, 104)
+
+[node name="DungeonStoneArchwayIvyGlowing260Nw2707348260" type="Sprite2D" parent="." unique_id=1330014214]
+position = Vector2(798.99994, 1314)
+scale = Vector2(6.887726, 4.8702316)
+texture = ExtResource("1_bbb7w")
