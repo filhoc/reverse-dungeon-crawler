@@ -39,7 +39,7 @@ position = Vector2(1402, -45)
 collision_layer = 4
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="right_boundary" unique_id=830763448]
-position = Vector2(1152, 329)
+position = Vector2(816, 329)
 shape = SubResource("WorldBoundaryShape2D_13qdw")
 
 [node name="left_boundary" type="StaticBody2D" parent="." unique_id=2052888714]
@@ -109,7 +109,7 @@ offset_bottom = 105.0
 script = ExtResource("5_c8stx")
 
 [node name="right_background" type="Sprite2D" parent="." unique_id=1850181026]
-position = Vector2(3790.7498, 251.24997)
+position = Vector2(3792.0002, 252)
 scale = Vector2(5.170416, 6.5375004)
 texture = ExtResource("6_level4_background")
 
