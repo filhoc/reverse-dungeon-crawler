@@ -58,6 +58,6 @@ theme_override_font_sizes/font_size = 24
 text = "Back to Loading Screen"
 
 [node name="Zeambodia" type="Sprite2D" parent="." unique_id=951405283]
-position = Vector2(216.00006, 330)
+position = Vector2(216.00008, 341.00003)
 scale = Vector2(0.2, 0.2)
 texture = ExtResource("3_46blr")
