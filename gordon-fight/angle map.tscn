@@ -25,6 +25,7 @@ scale = Vector2(2.473072, 1.7401527)
 texture = ExtResource("1_04c16")
 
 [node name="StaticBody2D" type="StaticBody2D" parent="1" unique_id=795462198]
+position = Vector2(1.2130661, -3.4479733)
 collision_layer = 255
 collision_mask = 255
 
@@ -95,6 +96,12 @@ text = "Score: 0"
 script = ExtResource("2_score")
 
 [node name="2" type="Sprite2D" parent="." unique_id=86499818]
+position = Vector2(620, 1422.9999)
+rotation = 3.1473281
+scale = Vector2(2.7126803, 1.7984935)
+texture = ExtResource("1_04c16")
+
+[node name="2" type="Sprite2D" parent="2" unique_id=1277828806]
 position = Vector2(620, 1422.9999)
 rotation = 3.1473281
 scale = Vector2(2.7126803, 1.7984935)
