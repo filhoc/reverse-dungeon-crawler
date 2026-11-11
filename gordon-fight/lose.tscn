@@ -3,6 +3,7 @@
 [ext_resource type="Texture2D" uid="uid://cdhetda7s56am" path="res://sceen/cccccc 7.44.18 PM.png" id="1_rtc1j"]
 [ext_resource type="Script" uid="uid://crk4rsrm60slk" path="res://lose.gd" id="2_lose"]
 [ext_resource type="Texture2D" uid="uid://cga1f25n207hd" path="res://assets/sprites/Zeambodia.png" id="3_46blr"]
+[ext_resource type="Texture2D" uid="uid://5wfa07j05dxf" path="res://Untitled Design.png" id="4_xrsfq"]
 
 [node name="Control" type="Control" unique_id=271059537]
 layout_mode = 3
@@ -61,3 +62,8 @@ text = "Back to Loading Screen"
 position = Vector2(216.00008, 341.00003)
 scale = Vector2(0.2, 0.2)
 texture = ExtResource("3_46blr")
+
+[node name="UntitledDesign" type="Sprite2D" parent="." unique_id=1649948771]
+position = Vector2(930, 350)
+scale = Vector2(0.2, 0.2)
+texture = ExtResource("4_xrsfq")
