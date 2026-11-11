@@ -7,6 +7,7 @@
 [ext_resource type="Script" uid="uid://dj222jg6c8tq3" path="res://user_interface.gd" id="5_5hph3"]
 [ext_resource type="Script" uid="uid://c88qwtbhgm76x" path="res://warrior_spawner.gd" id="5_rka8t"]
 [ext_resource type="Script" uid="uid://csiwgqmur0xng" path="res://score_label.gd" id="6_j7kpp"]
+[ext_resource type="Texture2D" uid="uid://dhxc0lvhu4xxm" path="res://assets/sprites/filds.jpg" id="8_bjebc"]
 
 [sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_jgkqa"]
 normal = Vector2(0.9995902, 0.028624296)
@@ -93,3 +94,13 @@ layout_mode = 0
 offset_right = 40.0
 offset_bottom = 23.0
 script = ExtResource("6_j7kpp")
+
+[node name="right_fields" type="Sprite2D" parent="." unique_id=424523065]
+position = Vector2(1268, -69.25001)
+scale = Vector2(2.63, 2.6200001)
+texture = ExtResource("8_bjebc")
+
+[node name="left_fields" type="Sprite2D" parent="." unique_id=1214372865]
+position = Vector2(-1560, -70.81687)
+scale = Vector2(4.140473, 2.6657426)
+texture = ExtResource("8_bjebc")

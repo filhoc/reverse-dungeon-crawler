@@ -314,7 +314,7 @@ radius = 219.91135
 bg_color = Color(0.77866334, 0.0717848, 7.6046585e-06, 1)
 
 [node name="garfythegluttonous" type="CharacterBody2D" unique_id=1607562039 groups=["player"]]
-collision_layer = 2
+collision_mask = 4
 script = ExtResource("1_l1oi8")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=273871328]
@@ -364,6 +364,7 @@ offset_right = 337.0
 offset_bottom = -222.0
 theme_override_styles/background = SubResource("StyleBoxEmpty_l1oi8")
 theme_override_styles/fill = SubResource("StyleBoxFlat_tif80")
+max_value = 300.0
 show_percentage = false
 
 [node name="enemy_target" type="Marker2D" parent="." unique_id=727947354]

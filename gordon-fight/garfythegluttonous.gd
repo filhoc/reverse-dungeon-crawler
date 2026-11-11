@@ -16,9 +16,9 @@ const JUMP_VELOCITY = -700.0
 
 var is_attacking: bool = false
 
-var max_health = 150
-var health = 150
-var is_dead: bool = false
+var max_health = 300
+var health = 300
+
 
 
 func _ready() -> void:
@@ -30,16 +30,13 @@ func _ready() -> void:
 
 
 func take_damage(damage: int) -> void:
-	if is_dead:
-		return
 
-	health = max(health - damage, 0)
+	health -= damage
 	garfy_healthbar.value = health
 
 	print("you took ", damage, " damage")
 
 	if health <= 0:
-		is_dead = true
 		GameManager.final_score = GameManager.score
 		var error := get_tree().change_scene_to_file("res://lose.tscn")
 		if error != OK:
