@@ -14,8 +14,13 @@ grow_vertical = 2
 script = ExtResource("2_lose")
 
 [node name="Cccccc7_44_18Pm" type="Sprite2D" parent="." unique_id=1865850784]
+<<<<<<< HEAD
 position = Vector2(575, 344)
 scale = Vector2(0.58599997, 0.48656297)
+=======
+position = Vector2(579.92053, 352.09033)
+scale = Vector2(0.6190795, 0.5034083)
+>>>>>>> bc16cf2e2a6fc0e0df706719a0a03d031a27b56f
 texture = ExtResource("1_rtc1j")
 
 [node name="FinalScoreLabel" type="Label" parent="." unique_id=1397682662]
