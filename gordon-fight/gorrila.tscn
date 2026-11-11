@@ -39,17 +39,17 @@ region = Rect2(384, 384, 128, 128)
 atlas = ExtResource("2_w4rgy")
 region = Rect2(0, 512, 128, 128)
 
+[sub_resource type="AtlasTexture" id="AtlasTexture_nuegi"]
+atlas = ExtResource("2_w4rgy")
+region = Rect2(0, 128, 123, 128)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_w4rgy"]
+atlas = ExtResource("2_w4rgy")
+region = Rect2(226, 128, 113, 128)
+
 [sub_resource type="AtlasTexture" id="AtlasTexture_or630"]
 atlas = ExtResource("2_w4rgy")
-region = Rect2(128, 0, 128, 128)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_vqxth"]
-atlas = ExtResource("2_w4rgy")
-region = Rect2(256, 128, 128, 128)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_jlp5y"]
-atlas = ExtResource("2_w4rgy")
-region = Rect2(384, 128, 128, 128)
+region = Rect2(336, 128, 168, 128)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_p0xhv"]
 atlas = ExtResource("2_w4rgy")
@@ -95,7 +95,7 @@ animations = [{
 }, {
 "frames": [{
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_or630")
+"texture": SubResource("AtlasTexture_nuegi")
 }],
 "loop": 1,
 "name": &"default",
@@ -103,10 +103,10 @@ animations = [{
 }, {
 "frames": [{
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_vqxth")
+"texture": SubResource("AtlasTexture_w4rgy")
 }, {
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_jlp5y")
+"texture": SubResource("AtlasTexture_or630")
 }],
 "loop": 1,
 "name": &"main",
@@ -130,7 +130,7 @@ height = 56.0
 
 [sub_resource type="CapsuleShape2D" id="GorillaWeaponShape"]
 radius = 12.0
-height = 46.0
+height = 42.287365
 
 [sub_resource type="StyleBoxEmpty" id="GorillaHealthBarBackground"]
 
@@ -140,8 +140,11 @@ bg_color = Color(0.76, 0.1502267, 0.12920001, 1)
 [node name="gorrila" type="CharacterBody2D" unique_id=17873438]
 script = ExtResource("1_controller")
 
+[node name="enemy_target" type="Marker2D" parent="." unique_id=307192790]
+position = Vector2(-64, -3)
+
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=2115374684]
-position = Vector2(-55, -14)
+position = Vector2(-62, -17)
 scale = Vector2(1.4500691, 1.1712983)
 sprite_frames = SubResource("SpriteFrames_jgkqa")
 animation = &"secondary"
@@ -152,6 +155,7 @@ scale = Vector2(1.8451807, 1.534462)
 shape = SubResource("CapsuleShape2D_02ol6")
 
 [node name="Camera2D" type="Camera2D" parent="." unique_id=877878705]
+position = Vector2(-60, -17)
 scale = Vector2(7.893193, -4.0622582)
 zoom = Vector2(4, 4)
 position_smoothing_enabled = true
@@ -161,16 +165,16 @@ collision_layer = 2
 collision_mask = 8
 
 [node name="weapon_hitbox" type="CollisionShape2D" parent="weapon" unique_id=727555977]
-position = Vector2(2.000002, -5)
+position = Vector2(-3.0000048, -6)
 scale = Vector2(2.7945158, 2.1282952)
 shape = SubResource("GorillaWeaponShape")
 disabled = true
 
 [node name="beman_healthbar" type="ProgressBar" parent="." unique_id=1312871326]
-offset_left = -90.0
-offset_top = -79.0
-offset_right = -30.0
-offset_bottom = -66.0
+offset_left = -89.0
+offset_top = -71.0
+offset_right = -29.0
+offset_bottom = -58.0
 theme_override_styles/background = SubResource("GorillaHealthBarBackground")
 theme_override_styles/fill = SubResource("GorillaHealthBarFill")
 max_value = 50.0

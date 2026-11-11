@@ -97,5 +97,16 @@ position = Vector2(36, 367)
 rotation = 3.1378996
 texture = ExtResource("1_jn7i2")
 
+[node name="WmremoveTransformed(1)4_50_06Pm" type="Sprite2D" parent="WmremoveTransformed(1)4_50_06Pm" unique_id=1299195330]
+position = Vector2(-719.50226, 410.71387)
+rotation = 3.1378996
+scale = Vector2(0.86868715, 0.46626958)
+texture = ExtResource("1_jn7i2")
+
+[node name="WmremoveTransformed(1)4_50_06Pm" type="Sprite2D" parent="WmremoveTransformed(1)4_50_06Pm/WmremoveTransformed(1)4_50_06Pm" unique_id=1728692509]
+position = Vector2(-1670.289, -17.905373)
+rotation = 0.008260965
+scale = Vector2(0.86868715, 0.98149586)
+texture = ExtResource("1_jn7i2")
+
 [node name="gorrila" parent="." unique_id=17873438 instance=ExtResource("4_hex05")]
-scale = Vector2(0.8593457, 0.85531104)
