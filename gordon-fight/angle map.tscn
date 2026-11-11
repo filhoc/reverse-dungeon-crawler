@@ -102,9 +102,15 @@ scale = Vector2(2.7126803, 1.7984935)
 texture = ExtResource("1_04c16")
 
 [node name="2" type="Sprite2D" parent="2" unique_id=1277828806]
-position = Vector2(620, 1422.9999)
+position = Vector2(-1836.4373, 331.156)
 rotation = 3.1473281
 scale = Vector2(2.7126803, 1.7984935)
+texture = ExtResource("1_04c16")
+
+[node name="2" type="Sprite2D" parent="2/2" unique_id=79133365]
+position = Vector2(-1260.1188, 59.19109)
+rotation = 3.1473281
+scale = Vector2(-0.81479955, 1.3090532)
 texture = ExtResource("1_04c16")
 
 [node name="CharacterBody2D" parent="." unique_id=614585757 instance=ExtResource("5_ji84b")]
