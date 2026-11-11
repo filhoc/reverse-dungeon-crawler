@@ -1,7 +1,6 @@
 extends Control
 
 const LOADING_SCREEN_PATH := "res://control.tscn"
-const INTRO_STATE_PATH := "user://game_state.cfg"
 const SHEET_PATH := "res://Intro animation.png"
 const FRAME_SIZE := 64
 const SHEET_COLUMNS := 14
@@ -12,11 +11,6 @@ const INTRO_FPS := 24.0
 
 
 func _ready() -> void:
-	var saved_state := ConfigFile.new()
-	if saved_state.load(INTRO_STATE_PATH) == OK and saved_state.get_value("intro", "played", false):
-		_open_loading_screen()
-		return
-
 	if not _build_intro_animation():
 		return
 	intro_animation.animation_finished.connect(_on_intro_animation_finished)
@@ -53,11 +47,6 @@ func _build_intro_animation() -> bool:
 
 
 func _on_intro_animation_finished() -> void:
-	var saved_state := ConfigFile.new()
-	saved_state.set_value("intro", "played", true)
-	var save_error := saved_state.save(INTRO_STATE_PATH)
-	if save_error != OK:
-		push_error("Could not save the intro playback state (error %d)." % save_error)
 	_open_loading_screen()
 
 

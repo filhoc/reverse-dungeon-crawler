@@ -3,7 +3,7 @@
 [ext_resource type="Texture2D" uid="uid://bjoos5sbr2yum" path="res://sceen/wmremove-transformed (1) 4.50.06 PM.jpeg" id="1_jn7i2"]
 [ext_resource type="Script" uid="uid://c88qwtbhgm76x" path="res://warrior_spawner.gd" id="2_1ncg2"]
 [ext_resource type="PackedScene" uid="uid://w8e6pocxnkb1" path="res://warrior.tscn" id="3_2dg1f"]
-[ext_resource type="PackedScene" uid="uid://ca2n0wjd0qqiq" path="res://characters/gorrila.tscn" id="4_hex05"]
+[ext_resource type="PackedScene" uid="uid://ca2n0wjd0qqiq" path="res://gorrila.tscn" id="4_hex05"]
 [ext_resource type="Script" uid="uid://dj222jg6c8tq3" path="res://user_interface.gd" id="5_2dg1f"]
 [ext_resource type="Script" uid="uid://csiwgqmur0xng" path="res://score_label.gd" id="5_score"]
 
@@ -92,9 +92,10 @@ offset_right = 40.0
 offset_bottom = 23.0
 script = ExtResource("5_score")
 
-[node name="gorrila" parent="." unique_id=17873438 instance=ExtResource("4_hex05")]
-
 [node name="WmremoveTransformed(1)4_50_06Pm" type="Sprite2D" parent="." unique_id=2020237594]
 position = Vector2(36, 367)
 rotation = 3.1378996
 texture = ExtResource("1_jn7i2")
+
+[node name="gorrila" parent="." unique_id=17873438 instance=ExtResource("4_hex05")]
+scale = Vector2(0.8593457, 0.85531104)
